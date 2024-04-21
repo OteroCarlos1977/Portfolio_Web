@@ -1,11 +1,20 @@
 /*____ Estilos Generales____*/
+@import url('https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap');
+
+
+  
+  .sedan-regular-italic {
+    font-family: "Sedan", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
 
 *
 {
     scroll-behavior: smooth;
     margin: 0;
     padding: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
 }
 
 :root
@@ -24,29 +33,28 @@
     --gradient-main-B:rgb(25, 25, 27);
 }
 
-h1
-{
-    font-size: 50px;
-    color: var(--white-color);
-    font-weight: bold;
-    text-shadow: 4px 4px 8px  var(--black-color);
-}
-/*____ Fin Estilos Generales____*/
-
-/*____ Estilos Body____*/
-
 body
 {
     background-color: var(--main-bg-color);
 }
-/*____ Fin Estilos Body____*/
+
+h1
+{
+    font-size: 50px;
+    color: rgb(64, 0, 255);
+    font-weight: bold;
+    text-shadow: 1px 1px 2px  var(--black-color);
+}
+
+/*____ Fin Estilos Generales____*/
+
 
 /*____ Estilos Sección Home____*/
 .banner
 {
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(to top,var(--gradient-color-A),var(--gradient-color-B)), url(img/fondo1.jpg);
+    background-image: linear-gradient(to bottom,var(--gradient-color-A),var(--gradient-color-B)), url(img/fondo4.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -58,48 +66,6 @@ span
     text-transform: uppercase;
 }
 
-svg
-{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    transform: translateY(42%);
-}
-
-
-.content
-{
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
-    color: var(--white-color);
-}
-
-.content h1
-{
-    font-size: 70px;
-    margin: 80px;
-}
-
-
-.content p
-{
-    margin: 20px auto;
-    font-weight: 100;
-    line-height: 25px;
-    font-weight: bolder;
-}
-
-/*____ Fin Estilos Sección Home____*/
-
-/*____ Estilos Barra Navegación*/
-
-.navbar h1
-{
-    color: var(--detail-color);
-}
 .navbar
 {
     width: 85%;
@@ -152,52 +118,109 @@ svg
     text-shadow: 0px 0px 20px var(--detail-color);
 }
 
-.close, .open
+svg
 {
-    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
 }
 
-/*---------Estilos Responsivos*/
-@media screen and (max-width: 1200px) {
-    .navbar ul {
-        display: none; 
-        flex-direction: column;
-        width: 100%;
+
+.content
+{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: var(--white-color);
+}
+
+.content h1
+{
+    font-size: 70px;
+    margin: 80px;
+    color: var(--white-color);
+}
+
+
+.content p
+{
+    margin: 20px auto;
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+/*-----ESTILOS RESPONSIVOS-----*/
+@media(min-width: 1px) and (max-width:1100px)
+{
+    :root
+{
+    --main-bg-color: #f0f0f0;
+    --gradient-color-A : rgba(61, 0, 152, 0.35);
+    --gradient-color-B : rgba(0,0,0,1);
+    --detail-color: rgb(139, 8, 214);
+    --link-main-text-color: #fff;
+    --link-bg-color: rgba(0,0,0,0.5);
+    --line-color: rgb(64, 0, 255);
+    --border-color: #fff;
+    --white-color: white;
+    --black-color : black;
+}
+    .banner
+{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to bottom,var(--gradient-color-A),var(--gradient-color-B)), url(img/fondo1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+    
+    svg
+    {
+        display: none;
+
+    }
+
+
+    h1
+    {
+        font-size: 40px;      
         text-align: center;
-        text-decoration: none;
+               
     }
 
-    .navbar ul li a:hover
-{
-    text-shadow: none;
-}
-
-    .open {
-        display: block; 
-        font-size: 24px;
-        background: none;
-        border: none;
-        cursor: pointer;
+    .content h1
+    {
+        font-size: 25px;      
+        text-align: center;
+        
     }
 
-    .hamburguesa:focus {
-        outline: none;
-    }
-
-    .hamburguesa:hover {
-        text-shadow: none;
-    }
-
-    .hamburguesa:focus-visible + ul {
+    .navbar
+    {
+        margin: auto;
         display: flex;
+        flex-direction: column;
+        
+       
     }
-    .mostrar {
-        display: flex !important; 
+
+    .navbar ul li
+    {       
+        margin: 10px;
+        text-align: center;
+        
     }
+
+    .navbar ul li a
+    {
+        font-size: 15px;
+        
+    }
+    
+
+    
 }
-
-/*____ Estilos Barra Navegación*/
-
-/*---------Estilos */
-
-/*____ Estilos Sección Home____*/
