@@ -1,0 +1,196 @@
+/*____ Estilos Generales____*/
+
+*
+{
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+:root
+{
+    --main-bg-color: #f0f0f0;
+    --gradient-color-A : rgba(8, 29, 223, 0.144);
+    --gradient-color-B : rgb(2, 8, 85);
+    --detail-color: rgb(24, 20, 226);
+    --link-main-text-color: #fff;
+    --link-bg-color: rgba(0,0,0,0.5);
+    --line-color: rgb(64, 0, 255);
+    --border-color: #fff;
+    --white-color: white;
+    --black-color : black;
+    --gradient-main-A:rgba(202, 193, 219, 0.5);
+    --gradient-main-B:rgb(25, 25, 27);
+}
+
+h1
+{
+    font-size: 50px;
+    color: var(--white-color);
+    font-weight: bold;
+    text-shadow: 4px 4px 8px  var(--black-color);
+}
+/*____ Fin Estilos Generales____*/
+
+/*____ Estilos Body____*/
+
+body
+{
+    background-color: var(--main-bg-color);
+}
+/*____ Fin Estilos Body____*/
+
+/*____ Estilos Sección Home____*/
+.banner
+{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to top,var(--gradient-color-A),var(--gradient-color-B)), url(img/fondo1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+span
+{
+    color: var(--detail-color);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/*---------ESstilos barra Navegación*/
+.navbar h1
+{
+    color: var(--detail-color);
+}
+.navbar
+{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar ul li
+{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a
+{
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--link-main-text-color);
+    text-transform: uppercase;
+    transition: .25s ease-in;
+}
+
+/*-----PSEUDO ELEMENTOS-----*/
+.navbar ul li::after
+{
+    content: "";
+    height: 2px;
+    width: 0%;
+    background: var(--line-color);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after
+{
+    width: 100%;
+}
+
+.navbar ul li a:hover
+{
+    text-shadow: 0px 0px 20px var(--detail-color);
+}
+
+.hamburguesa
+{
+    display: none;
+}
+
+/*---------Estilos Responsivos*/
+@media only screen and (max-width: 768px) {
+    .navbar ul {
+        display: none; 
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .navbar ul li a:hover
+{
+    text-shadow: none;
+}
+
+    .hamburguesa {
+        display: block; 
+        font-size: 24px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .hamburguesa:focus {
+        outline: none;
+    }
+
+    .hamburguesa:hover {
+        text-shadow: none;
+    }
+
+    .hamburguesa:focus-visible + ul {
+        display: flex;
+    }
+    .mostrar {
+        display: flex !important; 
+    }
+}
+
+/*---------Fin Estilos barra Navegación*/
+
+svg
+{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    transform: translateY(42%);
+}
+
+
+.content
+{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: var(--white-color);
+}
+
+.content h1
+{
+    font-size: 70px;
+    margin: 80px;
+}
+
+
+.content p
+{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+/*____ Estilos Sección Home____*/
