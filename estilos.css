@@ -1,0 +1,259 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.li_item
+{
+    list-style: none;
+}
+
+.link
+{
+    text-decoration: none;
+    color:aliceblue;
+    font-size: 1rem;
+}
+
+.contenedor_home
+{
+    position: absolute;
+    padding: 0 2rem;
+    background: rgb(1,0,10);
+    
+    background-image: url(img/fondo7.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.contenedor
+{
+    margin: 5px;
+    background: rgba(232, 58, 58, 0.1);
+    backdrop-filter: 20px;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.navbar
+{
+    width: 100%;
+    height: 70px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.navbar .logo
+{
+    font-size: 1rem;
+    font-weight: bolder;
+    color:bisque;
+}
+
+.navbar .lista_navegacion
+{
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .lista_navegacion .li_item
+{
+    list-style: none;
+    position: relative;
+}
+.navbar .lista_navegacion .li_item .link
+{
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: teal;
+    text-transform: uppercase;
+    transition: .25 ease-in;
+}
+.navbar .toggle_btn
+{
+    color: aliceblue;
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+
+.navbar .lista_navegacion .li_item::after
+{
+    content: "";
+    height: 2px;
+    width: 0%;
+    background:rgb(42, 162, 162);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: 0.5s;
+}
+
+.navbar .lista_navegacion .li_item:hover::after
+{
+    width: 100%;
+}
+
+.navbar .lista_navegacion .li_item .link:hover
+{
+    text-shadow: 0px 0px 20px rgb(4, 42, 42);
+}
+
+span
+{
+    color: teal;
+    font-weight: bold;
+    
+}
+
+
+
+.content
+{
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    top: 10%;
+    text-align: center;
+    color:antiquewhite;
+}
+
+.content h1
+{
+    font-size: 60px;
+    margin-top: 80px;
+    color:antiquewhite;
+}
+
+
+.content p
+{
+    margin:60px auto;
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 10px;
+}
+
+/* ##### Barra Navegación para Responsivo #####*/
+
+.responsive_navbar
+{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 200px;
+    height: 0;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-decoration: none;
+}
+
+.open 
+{
+    height: 210px;
+}
+
+.responsive_navbar .li_res
+{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.responsive_navbar .li_res .link_res
+{
+    text-decoration: none;
+    color:aliceblue;
+    
+}
+
+.responsive_navbar .li_res .link_res:hover
+{
+    text-decoration: none;
+    color:teal;
+    
+}
+
+/* ##### Diseño Responsivo #####*/
+
+@media screen and (max-width:1000px){
+
+.navbar .lista_navegacion
+{
+    display:none
+}
+
+.navbar .toggle_btn
+{
+    display: block;
+}
+
+.responsive_navbar
+{
+    display: block;
+}
+.responsive_navbar  .li_res
+{
+    list-style: none;
+    position: relative;
+    text-decoration: none;
+}
+
+.navbar .logo
+{
+    color:darkolivegreen;
+    font-size: 0.8rem;
+}
+
+span
+{
+    color: teal;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.content
+{
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    top: 20%;
+    text-align: center;
+    color:antiquewhite;
+}
+
+.content h1
+{
+    font-size: 30px;
+    margin: 80px;
+    color:antiquewhite;
+}
+
+
+.content p
+{
+    margin:auto;
+    font-size: 12px;
+    font-weight: 100;
+    line-height: 10px;
+}
+
+
+}
+
