@@ -3,7 +3,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+    
 }
 
 .li_item
@@ -20,24 +21,27 @@
 
 .contenedor_home
 {
-    position: absolute;
-    padding: 0 2rem;
+    display: flex;
+    position: relative;
     background: rgb(1,0,10);
-    
-    background-image: url(img/fondo7.jpg);
+    background-image: url(img/fondo8.jpg);
     background-size: cover;
     background-position: center;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
+    align-items: center;
+    align-content: center;
+    font-family: 'Titillium Web';
 }
 
 .contenedor
 {
-    margin: 5px;
-    background: rgba(232, 58, 58, 0.1);
-    backdrop-filter: 20px;
+    padding: 20px;
+    margin: 20px;
+    background: rgba(19, 14, 14, 0.9);
     width: 100%;
-    height: 100%;
+    height: 90%;
+    
     
 }
 
@@ -54,29 +58,34 @@
 }
 
 .navbar .logo
+
 {
-    font-size: 1rem;
-    font-weight: bolder;
-    color:bisque;
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-family: "Yellowtail";
+    text-shadow: 0 0 35px #fff;
+    color:antiquewhite;
 }
 
 .navbar .lista_navegacion
 {
     display: flex;
     gap: 2rem;
+    
 }
 
 .navbar .lista_navegacion .li_item
 {
     list-style: none;
     position: relative;
+    font-size: 2rem;
 }
 .navbar .lista_navegacion .li_item .link
 {
     font-size: 18px;
     font-weight: bold;
     text-decoration: none;
-    color: teal;
+    color: #940253;
     text-transform: uppercase;
     transition: .25 ease-in;
 }
@@ -86,6 +95,8 @@
     font-size: 2rem;
     cursor: pointer;
     display: none;
+    margin-right: 20px;
+   
 }
 
 .navbar .lista_navegacion .li_item::after
@@ -93,7 +104,7 @@
     content: "";
     height: 2px;
     width: 0%;
-    background:rgb(42, 162, 162);
+    background:#940253;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -107,17 +118,15 @@
 
 .navbar .lista_navegacion .li_item .link:hover
 {
-    text-shadow: 0px 0px 20px rgb(4, 42, 42);
+    text-shadow: 0 0 35px #fff;
 }
 
 span
 {
-    color: teal;
+    color: #940253;
     font-weight: bold;
     
 }
-
-
 
 .content
 {
@@ -137,12 +146,19 @@ span
 }
 
 
-.content p
+.content a
 {
+    text-decoration: none;
+    color: antiquewhite;
     margin:60px auto;
     font-size: 20px;
     font-weight: 100;
-    line-height: 10px;
+    
+}
+
+.content p
+{
+    margin-top: 50px;
 }
 
 /* ##### Barra Navegación para Responsivo #####*/
@@ -152,7 +168,7 @@ span
     display: none;
     position: absolute;
     right: 2rem;
-    top: 60px;
+    top: 120px;
     width: 200px;
     height: 0;
     background: rgba(0, 0, 0, 0.2);
