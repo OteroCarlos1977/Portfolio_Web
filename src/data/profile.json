@@ -1,0 +1,38 @@
+{
+  "name": "Carlos Octavio Otero",
+  "title": "Full Stack Developer | React • Node.js • Apps con impacto social",
+  "location": "Buenos Aires, Argentina",
+  "tagline": "Soy un programador en plena carrera de aprendizaje, enfocado en construir soluciones con propósito.",
+  "about": "Soy Full Stack Developer con una sólida formación técnica y una profunda vocación social. Combino mi experiencia en Seguridad Ciudadana con mi pasión por la tecnología para crear soluciones digitales que aporten valor real. Trabajo con Node.js, React, Express, MongoDB, Vite y otras herramientas del ecosistema JavaScript, y me interesa especialmente la intersección entre IA, seguridad pública y mejora de la calidad de vida.",
+  "skills": {
+    "frontend": ["HTML", "CSS", "JavaScript", "React", "Vite", "Bootstrap"],
+    "backend": ["Node.js", "Express"],
+    "databases": ["MongoDB", "SQLite", "PostgreSQL"],
+    "other": ["Git", "GitHub", "APIs REST"]
+  },
+  "projects": [
+    {
+      "name": "Admin Productos - CRUD",
+      "description": "Aplicación React para gestión de productos, integrada con MockAPI. Incluye formularios con validación, modales, edición con PUT y alertas de confirmación.",
+      "technologies": ["React", "MockAPI", "Bootstrap"],
+      "repoUrl": "https://github.com/OteroCarlos1977/proy_teclab"
+    },
+    {
+      "name": "WeatherApp",
+      "description": "Aplicación del clima construida con React y consumo de una API externa. Permite buscar ciudades y ver el clima actual.",
+      "technologies": ["React", "API REST"],
+      "repoUrl": "https://github.com/OteroCarlos1977/WeatherApp"
+    },
+    {
+      "name": "Tesis: IA y Seguridad Pública",
+      "description": "Proyecto académico sobre el impacto de la inteligencia artificial en la seguridad pública argentina, con análisis normativo y propuestas éticas.",
+      "technologies": ["Investigación", "IA", "Seguridad Pública"],
+      "repoUrl": "https://github.com/OteroCarlos1977"
+    }
+  ],
+  "social": {
+    "github": "https://github.com/OteroCarlos1977",
+    "linkedin": "https://www.linkedin.com/in/tu-perfil-aqui",
+    "email": "tu-email@ejemplo.com"
+  }
+}
