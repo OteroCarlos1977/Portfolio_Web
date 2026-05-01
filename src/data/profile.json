@@ -16,7 +16,8 @@
       "name": "Turnero Hospital",
       "description": "Aplicación para gestionar turnos médicos con especialidades, disponibilidad, pacientes, reservas, cancelaciones y panel administrativo. Incluye demo estática para Vercel con datos mock y persistencia local.",
       "technologies": ["React", "Vite", "Node.js", "Express", "MySQL"],
-      "repoUrl": "https://github.com/OteroCarlos1977/turnero_hospital"
+      "repoUrl": "https://github.com/OteroCarlos1977/turnero_hospital",
+      "demoUrl": "https://turnero-hospital-two.vercel.app/"
     },
     {
       "name": "Portfolio Web",

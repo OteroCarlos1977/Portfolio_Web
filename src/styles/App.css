@@ -262,6 +262,12 @@ main {
   gap: 12px;
 }
 
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
 .tech-list {
   display: flex;
   flex-wrap: wrap;

@@ -20,9 +20,16 @@ const Projects = ({ projects }) => (
               ))}
             </div>
           </div>
-          <a href={project.repoUrl} target="_blank" rel="noreferrer" className="btn ghost">
-            Ver repositorio
-          </a>
+          <div className="project-actions">
+            {project.demoUrl && (
+              <a href={project.demoUrl} target="_blank" rel="noreferrer" className="btn primary">
+                Ver demo
+              </a>
+            )}
+            <a href={project.repoUrl} target="_blank" rel="noreferrer" className="btn ghost">
+              Ver repositorio
+            </a>
+          </div>
         </article>
       ))}
     </div>
@@ -36,6 +43,7 @@ Projects.propTypes = {
       description: PropTypes.string.isRequired,
       technologies: PropTypes.arrayOf(PropTypes.string).isRequired,
       repoUrl: PropTypes.string.isRequired,
+      demoUrl: PropTypes.string,
     })
   ).isRequired,
 };
