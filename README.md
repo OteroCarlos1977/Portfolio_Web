@@ -49,6 +49,33 @@ Para previsualizar el build:
 npm run preview
 ```
 
+## Deploy
+
+### Netlify
+
+El repo incluye `netlify.toml`, por lo que Netlify puede detectar la configuración automáticamente:
+
+```text
+Build command: npm run build
+Publish directory: dist
+```
+
+La redirección `/* -> /index.html` ya está configurada para que funcionen rutas internas de React.
+
+### GitHub Pages
+
+El repo incluye un workflow en `.github/workflows/deploy-pages.yml`. Para activarlo:
+
+1. Ir a `Settings > Pages`.
+2. En `Build and deployment`, elegir `GitHub Actions`.
+3. Hacer push a `main` o ejecutar manualmente el workflow.
+
+La URL esperada será:
+
+```text
+https://oterocarlos1977.github.io/Portfolio_Web/
+```
+
 ## Estructura principal
 
 ```text
