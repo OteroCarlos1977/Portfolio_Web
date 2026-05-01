@@ -23,7 +23,13 @@ const App = () => {
       </header>
 
       <main>
-        <Hero name={data.name} title={data.title} tagline={data.tagline} location={data.location} />
+        <Hero
+          name={data.name}
+          title={data.title}
+          tagline={data.tagline}
+          location={data.location}
+          avatarUrl={data.avatarUrl}
+        />
         <About about={data.about} />
         <Skills skills={data.skills} />
         <Projects projects={data.projects} />
