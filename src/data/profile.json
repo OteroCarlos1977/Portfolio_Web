@@ -1,14 +1,15 @@
 {
   "name": "Carlos Octavio Otero",
-  "title": "Full Stack Developer | React | Node.js | Software con impacto social",
+  "title": "Full Stack Developer | React | Node.js | Big Data",
   "location": "Buenos Aires, Argentina",
   "avatarUrl": "foto.jpeg",
-  "tagline": "Construyo aplicaciones web claras y funcionales para resolver necesidades reales en salud, gestión y servicios públicos.",
-  "about": "Soy desarrollador full stack con formación técnica en programación y experiencia en seguridad ciudadana. Me enfoco en transformar procesos complejos en aplicaciones web simples de usar, documentadas y mantenibles. Trabajo principalmente con React, Vite, Node.js, Express y bases de datos SQL/SQLite/MySQL, con interés especial en soluciones de impacto social, gestión pública y mejora operativa.",
+  "tagline": "Construyo aplicaciones web claras y funcionales, con interés en datos, automatización y soluciones basadas en información.",
+  "about": "Soy desarrollador full stack con formación técnica en programación y conocimientos en Big Data. Me enfoco en transformar procesos complejos en aplicaciones web simples de usar, documentadas y mantenibles. Trabajo principalmente con React, Vite, Node.js, Express y bases de datos SQL/SQLite/MySQL, con interés especial en análisis de datos, visualización de información, automatización y mejora operativa.",
   "skills": {
     "frontend": ["HTML", "CSS", "JavaScript", "React", "Vite", "Bootstrap"],
     "backend": ["Node.js", "Express", "APIs REST", "JWT"],
     "databases": ["MySQL", "SQLite", "localStorage"],
+    "data": ["Big Data", "Análisis de datos", "Modelado de datos", "Visualización de información"],
     "tools": ["Git", "GitHub", "Vercel", "npm"]
   },
   "projects": [
