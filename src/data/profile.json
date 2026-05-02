@@ -21,6 +21,12 @@
       "demoUrl": "https://turnero-hospital-two.vercel.app/"
     },
     {
+      "name": "Catálogo de Películas CRUD",
+      "description": "Aplicación full stack para administrar películas, usuarios, roles, géneros e imágenes de portada mediante API REST, Express, MySQL y carga de archivos.",
+      "technologies": ["JavaScript", "Node.js", "Express", "MySQL", "Multer"],
+      "repoUrl": "https://github.com/OteroCarlos1977/tpfinalg17"
+    },
+    {
       "name": "Portfolio Web",
       "description": "Portfolio personal con secciones de perfil, habilidades, proyectos y contacto. Incluye modo de edición local para actualizar contenido durante el desarrollo.",
       "technologies": ["React", "Vite", "CSS", "localStorage"],
