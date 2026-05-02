@@ -13,7 +13,9 @@ const App = () => {
   return (
     <div className="app">
       <header className="topbar">
-        <div className="logo">CO</div>
+        <a className="logo" href="#hero" aria-label="Inicio">
+          <img src="logo-co.png" alt="Logo CO" />
+        </a>
         <nav className="nav">
           <a href="#about">Sobre mí</a>
           <a href="#skills">Tecnologías</a>
