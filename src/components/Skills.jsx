@@ -22,12 +22,7 @@ const Skills = ({ skills }) => (
 );
 
 Skills.propTypes = {
-  skills: PropTypes.shape({
-    frontend: PropTypes.arrayOf(PropTypes.string),
-    backend: PropTypes.arrayOf(PropTypes.string),
-    databases: PropTypes.arrayOf(PropTypes.string),
-    other: PropTypes.arrayOf(PropTypes.string),
-  }).isRequired,
+  skills: PropTypes.objectOf(PropTypes.arrayOf(PropTypes.string)).isRequired,
 };
 
 export default Skills;
