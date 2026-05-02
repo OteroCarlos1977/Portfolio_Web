@@ -9,12 +9,19 @@ import AdminPanel from './components/AdminPanel';
 
 const App = () => {
   const { data, isAuthenticated, login } = usePortfolio();
+  const publicAsset = (path) => {
+    if (/^https?:\/\//.test(path)) {
+      return path;
+    }
+
+    return `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`;
+  };
 
   return (
     <div className="app">
       <header className="topbar">
         <a className="logo" href="#hero" aria-label="Inicio">
-          <img src="logo-co.png" alt="Logo CO" />
+          <img src={publicAsset('logo-co.png')} alt="Logo CO" />
         </a>
         <nav className="nav">
           <a href="#about">Sobre mí</a>
@@ -30,7 +37,7 @@ const App = () => {
           title={data.title}
           tagline={data.tagline}
           location={data.location}
-          avatarUrl={data.avatarUrl}
+          avatarUrl={publicAsset(data.avatarUrl)}
         />
         <About about={data.about} />
         <Skills skills={data.skills} />
