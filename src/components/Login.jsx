@@ -30,7 +30,7 @@ const Login = ({ onLogin }) => {
         type="text"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
-        placeholder="carlos"
+        placeholder="Nombre de Usuario"
       />
       <label htmlFor="password">Contraseña</label>
       <input
@@ -38,7 +38,7 @@ const Login = ({ onLogin }) => {
         type="password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
-        placeholder="1234"
+        placeholder="Ingrese Contraseña"
       />
       {error && <p className="error">{error}</p>}
       <button className="btn primary" type="submit">
