@@ -6,17 +6,37 @@ const PortfolioContext = createContext();
 const STORAGE_KEY = 'portfolio-data';
 const AUTH_KEY = 'portfolio-auth';
 
+const mergeProjects = (storedProjects = []) =>
+  profileData.projects.map((defaultProject) => ({
+    ...defaultProject,
+    ...(storedProjects.find((project) => project.name === defaultProject.name) || {}),
+  }));
+
+const mergeProfileData = (storedData) => ({
+  ...profileData,
+  ...storedData,
+  avatarUrl: storedData?.avatarUrl || profileData.avatarUrl,
+  skills: {
+    ...profileData.skills,
+    ...(storedData?.skills || {}),
+  },
+  social: {
+    ...profileData.social,
+    ...(storedData?.social || {}),
+  },
+  projects: mergeProjects(storedData?.projects),
+});
+
 export const PortfolioProvider = ({ children }) => {
   const [data, setData] = useState(profileData);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  // Cargar datos guardados/localStorage o datos iniciales del JSON
   useEffect(() => {
     const stored = localStorage.getItem(STORAGE_KEY);
     const storedAuth = localStorage.getItem(AUTH_KEY);
     if (stored) {
       try {
-        setData(JSON.parse(stored));
+        setData(mergeProfileData(JSON.parse(stored)));
       } catch (error) {
         console.error('Error al parsear datos guardados, usando valores por defecto', error);
       }
@@ -26,7 +46,6 @@ export const PortfolioProvider = ({ children }) => {
     }
   }, []);
 
-  // Sincronizar con localStorage para simular edición del JSON
   useEffect(() => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
   }, [data]);
@@ -97,11 +116,6 @@ export const PortfolioProvider = ({ children }) => {
     }),
     [data, isAuthenticated]
   );
-
-  /*
-   * Futuro: para reemplazar este JSON por datos reales, basta con cambiar el origen del estado inicial
-   * a una llamada fetch/axios dentro de un useEffect y sincronizar los setters con la respuesta de la API.
-   */
 
   return <PortfolioContext.Provider value={value}>{children}</PortfolioContext.Provider>;
 };

@@ -10,6 +10,10 @@ import AdminPanel from './components/AdminPanel';
 const App = () => {
   const { data, isAuthenticated, login } = usePortfolio();
   const publicAsset = (path) => {
+    if (!path) {
+      return '';
+    }
+
     if (/^https?:\/\//.test(path)) {
       return path;
     }
