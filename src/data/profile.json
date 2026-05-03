@@ -22,9 +22,10 @@
     },
     {
       "name": "Catálogo de Películas CRUD",
-      "description": "Aplicación full stack para administrar películas, usuarios, roles, géneros e imágenes de portada mediante API REST, Express, MySQL y carga de archivos.",
-      "technologies": ["JavaScript", "Node.js", "Express", "MySQL", "Multer"],
-      "repoUrl": "https://github.com/OteroCarlos1977/tpfinalg17"
+      "description": "Aplicación full stack para administrar películas, usuarios, roles, géneros e imágenes de portada mediante API REST, Express, SQLite y carga de archivos.",
+      "technologies": ["JavaScript", "Node.js", "Express", "SQLite", "Multer"],
+      "repoUrl": "https://github.com/OteroCarlos1977/tpfinalg17",
+      "demoUrl": "https://tpfinalg17.vercel.app/"
     },
     {
       "name": "Portfolio Web",
