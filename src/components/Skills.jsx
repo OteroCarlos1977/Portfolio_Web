@@ -66,9 +66,11 @@ const formatCategory = (category) =>
   categoryLabels[category] || category.charAt(0).toUpperCase() + category.slice(1);
 
 const SkillBadge = ({ skill }) => {
+  const specialClass = skill === 'Codex' ? ' codex-skill' : '';
+
   if (customIcons[skill]) {
     return (
-      <span className="skill-badge" title={skill}>
+      <span className={`skill-badge${specialClass}`} title={skill}>
         <span className="skill-icon" aria-hidden="true">
           {customIcons[skill]}
         </span>
@@ -79,7 +81,7 @@ const SkillBadge = ({ skill }) => {
 
   if (skillIcons[skill]) {
     return (
-      <span className="skill-badge" title={skill}>
+      <span className={`skill-badge${specialClass}`} title={skill}>
         <span className="skill-icon" aria-hidden="true">
           <img src={skillIcons[skill]} alt="" loading="lazy" />
         </span>
@@ -89,7 +91,7 @@ const SkillBadge = ({ skill }) => {
   }
 
   return (
-    <span className="skill-badge" title={skill}>
+    <span className={`skill-badge${specialClass}`} title={skill}>
       <span className="skill-icon fallback" aria-hidden="true">
         {fallbackIcons[skill] || skill.slice(0, 2).toUpperCase()}
       </span>

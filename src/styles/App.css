@@ -336,6 +336,17 @@ main {
   line-height: 1.25;
 }
 
+.skill-badge.codex-skill {
+  border-color: rgba(36, 214, 203, 0.38);
+  background: rgba(36, 214, 203, 0.16);
+  color: #eafffd;
+}
+
+.skill-badge.codex-skill .skill-icon {
+  border-radius: 8px;
+  background: rgba(36, 214, 203, 0.28);
+}
+
 .skill-icon {
   width: 24px;
   height: 24px;
