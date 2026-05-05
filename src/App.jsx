@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { usePortfolio } from './context/PortfolioContext';
 import Hero from './components/Hero';
 import About from './components/About';
+import ValueProposition from './components/ValueProposition';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
@@ -31,6 +32,7 @@ const App = () => {
         </a>
         <nav className="nav">
           <a href="#about">Sobre mí</a>
+          <a href="#value">Aporte</a>
           <a href="#skills">Tecnologías</a>
           <a href="#projects">Proyectos</a>
           <a href="#contact">Contacto</a>
@@ -83,6 +85,7 @@ const App = () => {
           avatarUrl={publicAsset(data.avatarUrl)}
         />
         <About about={data.about} />
+        <ValueProposition items={data.valueProposition} dataFocus={data.dataFocus} />
         <Skills skills={data.skills} />
         <Projects projects={data.projects} />
         <Contact social={data.social} />

@@ -5,6 +5,27 @@
   "avatarUrl": "foto.jpeg",
   "tagline": "Construyo aplicaciones web claras y funcionales, con interés en datos, automatización y soluciones basadas en información.",
   "about": "Soy desarrollador full stack con formación técnica en programación y conocimientos en Big Data. Me enfoco en transformar procesos complejos en aplicaciones web simples de usar, documentadas y mantenibles. Trabajo principalmente con React, Vite, Node.js, Express y bases de datos SQL/SQLite/MySQL, con interés especial en análisis de datos, visualización de información, automatización y mejora operativa.",
+  "valueProposition": [
+    {
+      "icon": "UI",
+      "title": "Interfaces claras",
+      "description": "Diseño pantallas simples de recorrer, con acciones visibles, estados claros y una experiencia pensada para usuarios reales."
+    },
+    {
+      "icon": "API",
+      "title": "Aplicaciones completas",
+      "description": "Integro frontend, backend, rutas, validaciones, persistencia y despliegue para que cada proyecto pueda probarse de punta a punta."
+    },
+    {
+      "icon": "DATA",
+      "title": "Decisiones con datos",
+      "description": "Aplico herramientas de análisis, automatización y visualización para convertir información operativa en reportes útiles."
+    }
+  ],
+  "dataFocus": {
+    "title": "Big Data aplicado a procesos cotidianos",
+    "description": "Trabajo con Excel, Google Sheets, Python, Power BI, Looker y Google Colab para limpiar datos, detectar patrones, preparar reportes y construir tableros que ayuden a entender mejor la operación."
+  },
   "skills": {
     "frontend": ["HTML", "CSS", "JavaScript", "React", "Vite", "Bootstrap"],
     "backend": ["Node.js", "Express", "APIs REST", "JWT"],
@@ -16,6 +37,11 @@
     {
       "name": "Turnero Hospital",
       "description": "Aplicación para gestionar turnos médicos con especialidades, disponibilidad, pacientes, reservas, cancelaciones y panel administrativo. Incluye demo estática para Vercel con datos mock y persistencia local.",
+      "caseStudy": {
+        "problem": "Organizar turnos médicos requiere una navegación rápida, disponibilidad clara y separación entre usuario y administración.",
+        "solution": "Construí un flujo con selección de especialidad, reserva, cancelación y panel administrativo, acompañado por una demo desplegada en Vercel.",
+        "impact": "Muestra capacidad para modelar procesos de atención, validar datos y presentar una solución funcional para uso institucional."
+      },
       "technologies": ["React", "Vite", "Node.js", "Express", "MySQL"],
       "repoUrl": "https://github.com/OteroCarlos1977/turnero_hospital",
       "demoUrl": "https://turnero-hospital-two.vercel.app/"
@@ -23,6 +49,11 @@
     {
       "name": "Catálogo de Películas CRUD",
       "description": "Aplicación full stack para administrar películas, usuarios, roles, géneros e imágenes de portada mediante API REST, Express, SQLite y carga de archivos.",
+      "caseStudy": {
+        "problem": "El proyecto dependía de una base externa y necesitaba quedar demostrable sin credenciales privadas.",
+        "solution": "Migré la persistencia a SQLite, documenté el flujo y dejé una demo con administración de películas, usuarios e imágenes.",
+        "impact": "Convierte un trabajo académico en una muestra full stack reproducible, con CRUD real, API y datos locales."
+      },
       "technologies": ["JavaScript", "Node.js", "Express", "SQLite", "Multer"],
       "images": [
         {
@@ -52,12 +83,22 @@
     {
       "name": "Portfolio Web",
       "description": "Portfolio personal con secciones de perfil, habilidades, proyectos y contacto. Incluye modo de edición local para actualizar contenido durante el desarrollo.",
+      "caseStudy": {
+        "problem": "Era necesario centralizar presentación profesional, proyectos, tecnologías y contacto en una sola experiencia.",
+        "solution": "Desarrollé un portfolio en React con datos estructurados, contacto vía Formspree, carruseles y publicación en GitHub Pages.",
+        "impact": "Funciona como carta de presentación técnica y permite mostrar proyectos con contexto, demo y repositorio."
+      },
       "technologies": ["React", "Vite", "CSS", "localStorage"],
       "repoUrl": "https://github.com/OteroCarlos1977/Portfolio_Web"
     },
     {
       "name": "Estudio Jurídico React",
       "description": "Aplicación orientada a gestión de expedientes y tareas para estudio jurídico, planteada con frontend React, backend Node.js y persistencia SQLite.",
+      "caseStudy": {
+        "problem": "Un estudio jurídico necesita centralizar expedientes, clientes, agenda y finanzas sin perder claridad operativa.",
+        "solution": "Organicé la interfaz en módulos con dashboard, expedientes, clientes, agenda y finanzas, mostrando capturas navegables.",
+        "impact": "Demuestra criterio para diseñar herramientas administrativas con múltiples vistas y foco en seguimiento de información."
+      },
       "technologies": ["React", "Node.js", "SQLite"],
       "images": [
         {
@@ -86,6 +127,11 @@
     {
       "name": "Proyecto Final COO",
       "description": "Proyecto final académico desarrollado con React, Vite, Bootstrap, React Router y SweetAlert2.",
+      "caseStudy": {
+        "problem": "Representar una entrega académica como parte del recorrido técnico sin sobrecargar el portfolio.",
+        "solution": "Lo mantengo como proyecto complementario, destacando tecnologías y aprendizaje de frontend moderno.",
+        "impact": "Refuerza evolución técnica, uso de rutas, componentes y librerías visuales en React."
+      },
       "technologies": ["React", "Vite", "Bootstrap", "React Router"],
       "repoUrl": "https://github.com/OteroCarlos1977/proyecto_final_COO"
     }

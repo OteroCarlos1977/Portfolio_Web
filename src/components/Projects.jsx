@@ -207,6 +207,16 @@ const Projects = ({ projects }) => {
                   )}
                 </div>
                 <p className="section-text small">{project.description}</p>
+                {project.caseStudy && (
+                  <div className="case-study compact" aria-label={`Caso de estudio de ${project.name}`}>
+                    <p>
+                      <strong>Problema:</strong> {project.caseStudy.problem}
+                    </p>
+                    <p>
+                      <strong>Aporte:</strong> {project.caseStudy.impact}
+                    </p>
+                  </div>
+                )}
                 <div className="tech-list" aria-label={`Tecnologías de ${project.name}`}>
                   {project.technologies.map((tech) => (
                     <TechIcon tech={tech} key={tech} />
@@ -241,6 +251,19 @@ const Projects = ({ projects }) => {
             </div>
             <ProjectCarousel images={expandedProject.images} projectName={expandedProject.name} expanded />
             <p className="section-text small">{expandedProject.description}</p>
+            {expandedProject.caseStudy && (
+              <div className="case-study" aria-label={`Caso de estudio de ${expandedProject.name}`}>
+                <p>
+                  <strong>Problema:</strong> {expandedProject.caseStudy.problem}
+                </p>
+                <p>
+                  <strong>Solución:</strong> {expandedProject.caseStudy.solution}
+                </p>
+                <p>
+                  <strong>Aporte:</strong> {expandedProject.caseStudy.impact}
+                </p>
+              </div>
+            )}
             <div className="tech-list" aria-label={`Tecnologías de ${expandedProject.name}`}>
               {expandedProject.technologies.map((tech) => (
                 <TechIcon tech={tech} key={tech} />
@@ -268,6 +291,11 @@ Projects.propTypes = {
     PropTypes.shape({
       name: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
+      caseStudy: PropTypes.shape({
+        problem: PropTypes.string.isRequired,
+        solution: PropTypes.string.isRequired,
+        impact: PropTypes.string.isRequired,
+      }),
       technologies: PropTypes.arrayOf(PropTypes.string).isRequired,
       images: PropTypes.arrayOf(
         PropTypes.shape({
