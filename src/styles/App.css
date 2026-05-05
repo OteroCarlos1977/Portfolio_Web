@@ -99,6 +99,49 @@ main {
   box-shadow: var(--shadow);
 }
 
+.edit-access {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.icon-btn {
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(108, 99, 255, 0.35);
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  color: var(--text);
+  background: rgba(108, 99, 255, 0.08);
+  cursor: pointer;
+  transition: transform 0.2s ease, border 0.2s ease, background 0.2s ease;
+}
+
+.icon-btn:hover {
+  transform: translateY(-2px);
+  border-color: rgba(108, 99, 255, 0.75);
+  background: rgba(108, 99, 255, 0.16);
+}
+
+.icon-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.login-popover {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  width: min(320px, calc(100vw - 36px));
+  z-index: 20;
+}
+
 .hero-content {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 180px;
@@ -431,6 +474,7 @@ main {
 .login {
   display: grid;
   gap: 8px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
 }
 
 .login input,
@@ -504,13 +548,15 @@ textarea {
 
 @media (max-width: 768px) {
   .topbar {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     gap: 12px;
   }
 
   .nav {
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .hero {

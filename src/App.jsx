@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { usePortfolio } from './context/PortfolioContext';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -9,6 +10,7 @@ import AdminPanel from './components/AdminPanel';
 
 const App = () => {
   const { data, isAuthenticated, login } = usePortfolio();
+  const [showLogin, setShowLogin] = useState(false);
   const publicAsset = (path) => {
     if (!path) {
       return '';
@@ -33,6 +35,43 @@ const App = () => {
           <a href="#projects">Proyectos</a>
           <a href="#contact">Contacto</a>
         </nav>
+        <div className="edit-access">
+          {isAuthenticated ? (
+            <a className="icon-btn" href="#admin" aria-label="Ir al panel de edición" title="Editar portfolio">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 20h9" />
+                <path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L8 18l-4 1 1-4Z" />
+              </svg>
+            </a>
+          ) : (
+            <button
+              className="icon-btn"
+              type="button"
+              onClick={() => setShowLogin((current) => !current)}
+              aria-label="Abrir modo edición"
+              title="Editar portfolio"
+              aria-expanded={showLogin}
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 20h9" />
+                <path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L8 18l-4 1 1-4Z" />
+              </svg>
+            </button>
+          )}
+          {!isAuthenticated && showLogin && (
+            <div className="login-popover">
+              <Login
+                onLogin={(username, password) => {
+                  const success = login(username, password);
+                  if (success) {
+                    setShowLogin(false);
+                  }
+                  return success;
+                }}
+              />
+            </div>
+          )}
+        </div>
       </header>
 
       <main>
@@ -47,7 +86,7 @@ const App = () => {
         <Skills skills={data.skills} />
         <Projects projects={data.projects} />
         <Contact social={data.social} />
-        {!isAuthenticated ? <Login onLogin={login} /> : <AdminPanel />}
+        {isAuthenticated && <AdminPanel />}
       </main>
 
       <footer className="footer">
