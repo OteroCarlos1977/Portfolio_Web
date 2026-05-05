@@ -334,6 +334,50 @@ main {
   justify-content: space-between;
   gap: 16px;
   overflow: hidden;
+  transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease;
+}
+
+.project.expandable {
+  cursor: zoom-in;
+}
+
+.project.expandable:hover {
+  border-color: rgba(108, 99, 255, 0.32);
+  transform: translateY(-3px);
+}
+
+.project.expanded {
+  grid-column: span 2;
+  cursor: zoom-out;
+  border-color: rgba(108, 99, 255, 0.58);
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.48);
+}
+
+.project.expanded .carousel-frame {
+  aspect-ratio: 16 / 10;
+}
+
+.project-title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.project-title-row h3 {
+  min-width: 0;
+}
+
+.expand-chip {
+  border: 1px solid rgba(108, 99, 255, 0.28);
+  border-radius: 999px;
+  padding: 6px 10px;
+  color: #d7d3ff;
+  background: rgba(108, 99, 255, 0.12);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
 }
 
 .project-content {
@@ -382,6 +426,7 @@ main {
   cursor: pointer;
   transform: translateY(-50%);
   transition: background 0.2s ease, transform 0.2s ease;
+  z-index: 2;
 }
 
 .carousel-control:hover {
@@ -576,6 +621,10 @@ textarea {
 
   .skills-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .project.expanded {
+    grid-column: auto;
   }
 }
 

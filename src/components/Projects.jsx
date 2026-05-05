@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const publicAsset = (path) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`;
 
@@ -41,29 +41,65 @@ TechIcon.propTypes = {
   tech: PropTypes.string.isRequired,
 };
 
-const ProjectCarousel = ({ images, projectName }) => {
+const ProjectCarousel = ({ images, projectName, expanded }) => {
   const [active, setActive] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const imageCount = images?.length || 0;
 
-  if (!images?.length) {
+  useEffect(() => {
+    if (isPaused || imageCount < 2) {
+      return undefined;
+    }
+
+    const interval = window.setInterval(() => {
+      setActive((current) => (current + 1) % imageCount);
+    }, expanded ? 4200 : 3200);
+
+    return () => window.clearInterval(interval);
+  }, [expanded, imageCount, isPaused]);
+
+  if (!imageCount) {
     return null;
   }
 
   const goTo = (direction) => {
-    setActive((current) => (current + direction + images.length) % images.length);
+    setActive((current) => (current + direction + imageCount) % imageCount);
   };
 
   const image = images[active];
 
   return (
-    <div className="project-carousel">
+    <div
+      className="project-carousel"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+      onFocus={() => setIsPaused(true)}
+      onBlur={() => setIsPaused(false)}
+    >
       <div className="carousel-frame">
         <img src={publicAsset(image.src)} alt={image.alt || `${projectName} captura ${active + 1}`} loading="lazy" />
         {images.length > 1 && (
           <>
-            <button className="carousel-control previous" type="button" onClick={() => goTo(-1)} aria-label="Imagen anterior">
+            <button
+              className="carousel-control previous"
+              type="button"
+              onClick={(event) => {
+                event.stopPropagation();
+                goTo(-1);
+              }}
+              aria-label="Imagen anterior"
+            >
               {'<'}
             </button>
-            <button className="carousel-control next" type="button" onClick={() => goTo(1)} aria-label="Imagen siguiente">
+            <button
+              className="carousel-control next"
+              type="button"
+              onClick={(event) => {
+                event.stopPropagation();
+                goTo(1);
+              }}
+              aria-label="Imagen siguiente"
+            >
               {'>'}
             </button>
           </>
@@ -76,7 +112,10 @@ const ProjectCarousel = ({ images, projectName }) => {
               className={index === active ? 'active' : ''}
               type="button"
               key={item.src}
-              onClick={() => setActive(index)}
+              onClick={(event) => {
+                event.stopPropagation();
+                setActive(index);
+              }}
               aria-label={`Ver captura ${index + 1}`}
             />
           ))}
@@ -94,46 +133,84 @@ ProjectCarousel.propTypes = {
     })
   ),
   projectName: PropTypes.string.isRequired,
+  expanded: PropTypes.bool,
 };
 
 ProjectCarousel.defaultProps = {
   images: [],
+  expanded: false,
 };
 
-const Projects = ({ projects }) => (
-  <section className="section" id="projects">
-    <div className="section-header">
-      <p className="eyebrow">Proyectos</p>
-      <h2>Destacados con propósito</h2>
-    </div>
-    <div className="projects-grid">
-      {projects.map((project, index) => (
-        <article className="card project" key={project.name + index}>
-          <ProjectCarousel images={project.images} projectName={project.name} />
-          <div className="project-content">
-            <h3>{project.name}</h3>
-            <p className="section-text small">{project.description}</p>
-            <div className="tech-list" aria-label={`Tecnologías de ${project.name}`}>
-              {project.technologies.map((tech) => (
-                <TechIcon tech={tech} key={tech} />
-              ))}
-            </div>
-          </div>
-          <div className="project-actions">
-            {project.demoUrl && (
-              <a href={project.demoUrl} target="_blank" rel="noreferrer" className="btn primary">
-                Ver demo
-              </a>
-            )}
-            <a href={project.repoUrl} target="_blank" rel="noreferrer" className="btn ghost">
-              Ver repositorio
-            </a>
-          </div>
-        </article>
-      ))}
-    </div>
-  </section>
-);
+const Projects = ({ projects }) => {
+  const [expandedProject, setExpandedProject] = useState(null);
+
+  const toggleExpanded = (projectName) => {
+    setExpandedProject((current) => (current === projectName ? null : projectName));
+  };
+
+  return (
+    <section className="section" id="projects">
+      <div className="section-header">
+        <p className="eyebrow">Proyectos</p>
+        <h2>Destacados con propósito</h2>
+      </div>
+      <div className="projects-grid">
+        {projects.map((project, index) => {
+          const canExpand = Boolean(project.images?.length);
+          const isExpanded = expandedProject === project.name;
+
+          return (
+            <article
+              className={`card project ${canExpand ? 'expandable' : ''} ${isExpanded ? 'expanded' : ''}`}
+              key={project.name + index}
+              onClick={() => {
+                if (canExpand) {
+                  toggleExpanded(project.name);
+                }
+              }}
+            >
+              <ProjectCarousel images={project.images} projectName={project.name} expanded={isExpanded} />
+              <div className="project-content">
+                <div className="project-title-row">
+                  <h3>{project.name}</h3>
+                  {canExpand && (
+                    <button
+                      className="expand-chip"
+                      type="button"
+                      onClick={(event) => {
+                        event.stopPropagation();
+                        toggleExpanded(project.name);
+                      }}
+                      aria-expanded={isExpanded}
+                    >
+                      {isExpanded ? 'Reducir' : 'Ampliar'}
+                    </button>
+                  )}
+                </div>
+                <p className="section-text small">{project.description}</p>
+                <div className="tech-list" aria-label={`Tecnologías de ${project.name}`}>
+                  {project.technologies.map((tech) => (
+                    <TechIcon tech={tech} key={tech} />
+                  ))}
+                </div>
+              </div>
+              <div className="project-actions" onClick={(event) => event.stopPropagation()}>
+                {project.demoUrl && (
+                  <a href={project.demoUrl} target="_blank" rel="noreferrer" className="btn primary">
+                    Ver demo
+                  </a>
+                )}
+                <a href={project.repoUrl} target="_blank" rel="noreferrer" className="btn ghost">
+                  Ver repositorio
+                </a>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+    </section>
+  );
+};
 
 Projects.propTypes = {
   projects: PropTypes.arrayOf(
