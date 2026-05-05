@@ -207,6 +207,12 @@ main {
   text-decoration: none;
 }
 
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+  transform: none;
+}
+
 .btn.primary {
   background: var(--accent);
   color: #0f1116;

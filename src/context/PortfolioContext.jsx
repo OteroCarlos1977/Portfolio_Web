@@ -30,6 +30,7 @@ const mergeProfileData = (storedData) => ({
   social: {
     ...profileData.social,
     ...(storedData?.social || {}),
+    contactEndpoint: storedData?.social?.contactEndpoint || profileData.social.contactEndpoint,
   },
   projects: mergeProjects(storedData?.projects),
 });

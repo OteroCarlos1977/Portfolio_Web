@@ -12,7 +12,10 @@ const Contact = ({ social }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [form, setForm] = useState(initialForm);
   const [sent, setSent] = useState(false);
+  const [isSending, setIsSending] = useState(false);
+  const [error, setError] = useState('');
   const email = `${social.emailUser}@${social.emailDomain}`;
+  const endpoint = social.contactEndpoint;
 
   const updateField = (field, value) => {
     setForm((current) => ({
@@ -24,22 +27,50 @@ const Contact = ({ social }) => {
   const closeModal = () => {
     setIsOpen(false);
     setSent(false);
+    setError('');
+    setIsSending(false);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
+    setError('');
 
-    const subject = form.subject || 'Consulta desde portfolio';
-    const body = [
-      `Nombre: ${form.name}`,
-      `Email de contacto: ${form.replyTo}`,
-      '',
-      form.message,
-    ].join('\n');
+    if (!endpoint) {
+      setError('El formulario está casi listo. Falta configurar el endpoint seguro de envío.');
+      return;
+    }
 
-    window.location.assign(`mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`);
-    setSent(true);
-    setForm(initialForm);
+    setIsSending(true);
+
+    try {
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.replyTo,
+          subject: form.subject || 'Consulta desde portfolio',
+          message: form.message,
+          _replyto: form.replyTo,
+          _subject: form.subject || 'Consulta desde portfolio',
+          destination: email,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('No se pudo enviar la consulta.');
+      }
+
+      setSent(true);
+      setForm(initialForm);
+    } catch (submitError) {
+      setError('No pude enviar tu consulta en este momento. Intentá nuevamente en unos minutos.');
+    } finally {
+      setIsSending(false);
+    }
   };
 
   return (
@@ -124,8 +155,10 @@ const Contact = ({ social }) => {
                   required
                 />
 
-                <button className="btn primary" type="submit">
-                  Enviar consulta
+                {error && <p className="error">{error}</p>}
+
+                <button className="btn primary" type="submit" disabled={isSending}>
+                  {isSending ? 'Enviando...' : 'Enviar consulta'}
                 </button>
               </form>
             )}
@@ -142,6 +175,7 @@ Contact.propTypes = {
     linkedin: PropTypes.string.isRequired,
     emailUser: PropTypes.string.isRequired,
     emailDomain: PropTypes.string.isRequired,
+    contactEndpoint: PropTypes.string,
   }).isRequired,
 };
 
