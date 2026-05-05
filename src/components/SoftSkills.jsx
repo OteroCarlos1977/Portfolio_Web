@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import IconGlyph from './IconGlyph';
 
 const SoftSkills = ({ skills }) => (
   <section className="section soft-skills-section" id="soft-skills">
@@ -10,7 +11,7 @@ const SoftSkills = ({ skills }) => (
       {skills.map((skill) => (
         <article className="soft-skill-card" key={skill.title}>
           <span className="soft-skill-icon" aria-hidden="true">
-            {skill.icon}
+            <IconGlyph name={skill.icon} />
           </span>
           <div>
             <h3>{skill.title}</h3>

@@ -7,17 +7,17 @@
   "about": "Soy desarrollador full stack con formación técnica en programación y conocimientos en Big Data. Me enfoco en transformar procesos complejos en aplicaciones web simples de usar, documentadas y mantenibles. Trabajo principalmente con React, Vite, Node.js, Express y bases de datos SQL/SQLite/MySQL, con interés especial en análisis de datos, visualización de información, automatización y mejora operativa.",
   "valueProposition": [
     {
-      "icon": "UI",
+      "icon": "monitor",
       "title": "Interfaces claras",
       "description": "Diseño pantallas simples de recorrer, con acciones visibles, estados claros y una experiencia pensada para usuarios reales."
     },
     {
-      "icon": "API",
+      "icon": "code",
       "title": "Aplicaciones completas",
       "description": "Integro frontend, backend, rutas, validaciones, persistencia y despliegue para que cada proyecto pueda probarse de punta a punta."
     },
     {
-      "icon": "DATA",
+      "icon": "chart",
       "title": "Decisiones con datos",
       "description": "Aplico herramientas de análisis, automatización y visualización para convertir información operativa en reportes útiles."
     }
@@ -28,22 +28,22 @@
   },
   "softSkills": [
     {
-      "icon": "CL",
+      "icon": "message",
       "title": "Comunicación clara",
       "description": "Me enfoco en explicar avances, bloqueos y decisiones técnicas de forma concreta para facilitar el trabajo en equipo."
     },
     {
-      "icon": "PR",
+      "icon": "lightbulb",
       "title": "Resolución de problemas",
       "description": "Analizo el flujo completo, identifico causas y busco soluciones simples que puedan sostenerse y mantenerse."
     },
     {
-      "icon": "OR",
+      "icon": "checklist",
       "title": "Organización",
       "description": "Ordeno tareas, documentación y prioridades para avanzar con criterio y reducir retrabajo."
     },
     {
-      "icon": "AD",
+      "icon": "book",
       "title": "Aprendizaje continuo",
       "description": "Incorporo herramientas, buenas prácticas y nuevas tecnologías cuando aportan valor real al proyecto."
     }

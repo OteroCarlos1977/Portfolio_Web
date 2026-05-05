@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import IconGlyph from './IconGlyph';
 
 const ValueProposition = ({ items, dataFocus }) => (
   <section className="section value-section" id="value">
@@ -10,7 +11,7 @@ const ValueProposition = ({ items, dataFocus }) => (
       {items.map((item) => (
         <article className="value-card" key={item.title}>
           <span className="value-index" aria-hidden="true">
-            {item.icon}
+            <IconGlyph name={item.icon} />
           </span>
           <h3>{item.title}</h3>
           <p>{item.description}</p>
