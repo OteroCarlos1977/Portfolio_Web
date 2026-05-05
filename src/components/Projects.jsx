@@ -144,9 +144,29 @@ ProjectCarousel.defaultProps = {
 const Projects = ({ projects }) => {
   const [expandedProject, setExpandedProject] = useState(null);
 
-  const toggleExpanded = (projectName) => {
-    setExpandedProject((current) => (current === projectName ? null : projectName));
-  };
+  const openProject = (project) => setExpandedProject(project);
+  const closeProject = () => setExpandedProject(null);
+
+  useEffect(() => {
+    if (!expandedProject) {
+      return undefined;
+    }
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        closeProject();
+      }
+    };
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [expandedProject]);
 
   return (
     <section className="section" id="projects">
@@ -157,19 +177,18 @@ const Projects = ({ projects }) => {
       <div className="projects-grid">
         {projects.map((project, index) => {
           const canExpand = Boolean(project.images?.length);
-          const isExpanded = expandedProject === project.name;
 
           return (
             <article
-              className={`card project ${canExpand ? 'expandable' : ''} ${isExpanded ? 'expanded' : ''}`}
+              className={`card project ${canExpand ? 'expandable' : ''}`}
               key={project.name + index}
               onClick={() => {
                 if (canExpand) {
-                  toggleExpanded(project.name);
+                  openProject(project);
                 }
               }}
             >
-              <ProjectCarousel images={project.images} projectName={project.name} expanded={isExpanded} />
+              <ProjectCarousel images={project.images} projectName={project.name} />
               <div className="project-content">
                 <div className="project-title-row">
                   <h3>{project.name}</h3>
@@ -179,11 +198,11 @@ const Projects = ({ projects }) => {
                       type="button"
                       onClick={(event) => {
                         event.stopPropagation();
-                        toggleExpanded(project.name);
+                        openProject(project);
                       }}
-                      aria-expanded={isExpanded}
+                      aria-haspopup="dialog"
                     >
-                      {isExpanded ? 'Reducir' : 'Ampliar'}
+                      Ampliar
                     </button>
                   )}
                 </div>
@@ -208,6 +227,38 @@ const Projects = ({ projects }) => {
           );
         })}
       </div>
+      {expandedProject && (
+        <div className="project-modal" role="dialog" aria-modal="true" aria-label={expandedProject.name} onClick={closeProject}>
+          <article className="project-modal-card" onClick={(event) => event.stopPropagation()}>
+            <div className="project-modal-header">
+              <div>
+                <p className="eyebrow">Vista ampliada</p>
+                <h3>{expandedProject.name}</h3>
+              </div>
+              <button className="modal-close" type="button" onClick={closeProject} aria-label="Cerrar vista ampliada">
+                x
+              </button>
+            </div>
+            <ProjectCarousel images={expandedProject.images} projectName={expandedProject.name} expanded />
+            <p className="section-text small">{expandedProject.description}</p>
+            <div className="tech-list" aria-label={`Tecnologías de ${expandedProject.name}`}>
+              {expandedProject.technologies.map((tech) => (
+                <TechIcon tech={tech} key={tech} />
+              ))}
+            </div>
+            <div className="project-actions">
+              {expandedProject.demoUrl && (
+                <a href={expandedProject.demoUrl} target="_blank" rel="noreferrer" className="btn primary">
+                  Ver demo
+                </a>
+              )}
+              <a href={expandedProject.repoUrl} target="_blank" rel="noreferrer" className="btn ghost">
+                Ver repositorio
+              </a>
+            </div>
+          </article>
+        </div>
+      )}
     </section>
   );
 };

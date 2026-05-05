@@ -338,23 +338,12 @@ main {
 }
 
 .project.expandable {
-  cursor: zoom-in;
+  cursor: pointer;
 }
 
 .project.expandable:hover {
   border-color: rgba(108, 99, 255, 0.32);
   transform: translateY(-3px);
-}
-
-.project.expanded {
-  grid-column: span 2;
-  cursor: zoom-out;
-  border-color: rgba(108, 99, 255, 0.58);
-  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.48);
-}
-
-.project.expanded .carousel-frame {
-  aspect-ratio: 16 / 10;
 }
 
 .project-title-row {
@@ -378,6 +367,73 @@ main {
   font-size: 12px;
   font-weight: 700;
   white-space: nowrap;
+}
+
+.project-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(5, 7, 12, 0.82);
+  backdrop-filter: blur(8px);
+}
+
+.project-modal-card {
+  width: min(1080px, 100%);
+  max-height: calc(100vh - 48px);
+  display: grid;
+  gap: 16px;
+  overflow: auto;
+  padding: 22px;
+  border: 1px solid rgba(108, 99, 255, 0.45);
+  border-radius: 18px;
+  background: #141824;
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.62);
+}
+
+.project-modal-card .project-carousel {
+  margin: 0;
+}
+
+.project-modal-card .carousel-frame {
+  aspect-ratio: 16 / 10;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.project-modal-card .carousel-frame img {
+  object-fit: contain;
+}
+
+.project-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.project-modal-header h3 {
+  margin: 4px 0 0;
+}
+
+.modal-close {
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.06);
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.modal-close:hover {
+  background: rgba(108, 99, 255, 0.22);
 }
 
 .project-content {
@@ -623,8 +679,17 @@ textarea {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .project.expanded {
-    grid-column: auto;
+  .project-modal {
+    padding: 12px;
+  }
+
+  .project-modal-card {
+    max-height: calc(100vh - 24px);
+    padding: 14px;
+  }
+
+  .project-modal-card .carousel-frame {
+    aspect-ratio: 4 / 3;
   }
 }
 
