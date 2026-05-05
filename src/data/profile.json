@@ -9,7 +9,7 @@
     "frontend": ["HTML", "CSS", "JavaScript", "React", "Vite", "Bootstrap"],
     "backend": ["Node.js", "Express", "APIs REST", "JWT"],
     "databases": ["MySQL", "SQLite", "localStorage"],
-    "data": ["Big Data", "Análisis de datos", "Modelado de datos", "Visualización de información"],
+    "data": ["Excel", "Google Sheets", "Python", "Power BI", "Looker", "Google Colab"],
     "tools": ["Git", "GitHub", "Vercel", "npm"]
   },
   "projects": [

@@ -24,15 +24,18 @@ const skillIcons = {
   GitHub: 'https://cdn.simpleicons.org/github/FFFFFF',
   Vercel: 'https://cdn.simpleicons.org/vercel/FFFFFF',
   npm: 'https://cdn.simpleicons.org/npm/CB3837',
+  Excel: 'https://cdn.simpleicons.org/microsoftexcel/217346',
+  'Google Sheets': 'https://cdn.simpleicons.org/googlesheets/34A853',
+  Python: 'https://cdn.simpleicons.org/python/3776AB',
+  'Power BI': 'https://cdn.simpleicons.org/powerbi/F2C811',
+  Looker: 'https://cdn.simpleicons.org/looker/4285F4',
+  'Google Colab': 'https://cdn.simpleicons.org/googlecolab/F9AB00',
 };
 
 const fallbackIcons = {
   'APIs REST': 'API',
   localStorage: 'LS',
   'Big Data': 'BD',
-  'Análisis de datos': 'AD',
-  'Modelado de datos': 'MD',
-  'Visualización de información': 'VI',
 };
 
 const formatCategory = (category) =>
