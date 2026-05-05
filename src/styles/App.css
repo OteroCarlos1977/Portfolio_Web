@@ -390,6 +390,51 @@ main {
   color: #c6ccdb;
 }
 
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.education-card {
+  min-width: 0;
+  display: grid;
+  gap: 10px;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.education-card h3,
+.education-card p {
+  margin: 0;
+}
+
+.education-type {
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: 8px;
+  padding: 5px 8px;
+  border: 1px solid rgba(108, 99, 255, 0.26);
+  border-radius: 999px;
+  color: #d7d3ff;
+  background: rgba(108, 99, 255, 0.1);
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.education-institution {
+  color: #f5f6fb;
+  font-weight: 750;
+}
+
+.education-card p:not(.education-type):not(.education-institution) {
+  color: #c6ccdb;
+}
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -950,7 +995,8 @@ textarea {
 
   .value-grid,
   .data-focus,
-  .soft-skills-grid {
+  .soft-skills-grid,
+  .education-grid {
     grid-template-columns: 1fr;
   }
 

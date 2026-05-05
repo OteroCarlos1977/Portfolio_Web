@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import ValueProposition from './components/ValueProposition';
 import SoftSkills from './components/SoftSkills';
+import Education from './components/Education';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
@@ -35,6 +36,7 @@ const App = () => {
           <a href="#about">Sobre mí</a>
           <a href="#value">Aporte</a>
           <a href="#soft-skills">Habilidades</a>
+          <a href="#education">Formación</a>
           <a href="#skills">Tecnologías</a>
           <a href="#projects">Proyectos</a>
           <a href="#contact">Contacto</a>
@@ -89,6 +91,7 @@ const App = () => {
         <About about={data.about} />
         <ValueProposition items={data.valueProposition} dataFocus={data.dataFocus} />
         <SoftSkills skills={data.softSkills} />
+        <Education education={data.education} />
         <Skills skills={data.skills} />
         <Projects projects={data.projects} />
         <Contact social={data.social} />

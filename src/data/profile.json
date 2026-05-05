@@ -48,6 +48,44 @@
       "description": "Incorporo herramientas, buenas prácticas y nuevas tecnologías cuando aportan valor real al proyecto."
     }
   ],
+  "education": [
+    {
+      "type": "Formación académica",
+      "title": "Formación técnica en programación",
+      "institution": "Teclab",
+      "description": "Analítico disponible en la carpeta de certificados. Pendiente confirmar título exacto, estado y fechas para el CV final."
+    },
+    {
+      "type": "Certificación",
+      "title": "Desarrollo Web Front-End",
+      "institution": "Argentina Programa 4.0",
+      "description": "Certificación orientada a bases de desarrollo web frontend, maquetación e implementación de interfaces."
+    },
+    {
+      "type": "Certificación",
+      "title": "Big Data",
+      "institution": "Codo a Codo",
+      "description": "Formación vinculada a análisis de datos, procesamiento de información y herramientas para trabajo con datos."
+    },
+    {
+      "type": "Certificación",
+      "title": "Java, POO, algoritmos y bases de datos",
+      "institution": "TodoCode",
+      "description": "Capacitaciones complementarias en lógica de programación, Java principiante, programación orientada a objetos y bases de datos."
+    },
+    {
+      "type": "Idiomas",
+      "title": "Inglés y Francés Nivel II",
+      "institution": "CUI y certificaciones complementarias",
+      "description": "Certificados disponibles para respaldar formación en idiomas. Pendiente confirmar nivel final y fechas."
+    },
+    {
+      "type": "Herramientas",
+      "title": "Introducción a Git, HTML y CSS",
+      "institution": "Certificaciones complementarias",
+      "description": "Formación de apoyo para control de versiones, estructura web y estilos."
+    }
+  ],
   "skills": {
     "frontend": ["HTML", "CSS", "JavaScript", "React", "Vite", "Bootstrap"],
     "backend": ["Node.js", "Express", "APIs REST", "JWT"],
