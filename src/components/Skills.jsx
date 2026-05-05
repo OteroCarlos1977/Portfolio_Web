@@ -24,10 +24,8 @@ const skillIcons = {
   GitHub: 'https://cdn.simpleicons.org/github/FFFFFF',
   Vercel: 'https://cdn.simpleicons.org/vercel/FFFFFF',
   npm: 'https://cdn.simpleicons.org/npm/CB3837',
-  Excel: 'https://cdn.simpleicons.org/microsoftexcel/217346',
   'Google Sheets': 'https://cdn.simpleicons.org/googlesheets/34A853',
   Python: 'https://cdn.simpleicons.org/python/3776AB',
-  'Power BI': 'https://cdn.simpleicons.org/powerbi/F2C811',
   Looker: 'https://cdn.simpleicons.org/looker/4285F4',
   'Google Colab': 'https://cdn.simpleicons.org/googlecolab/F9AB00',
 };
@@ -38,10 +36,42 @@ const fallbackIcons = {
   'Big Data': 'BD',
 };
 
+const customIcons = {
+  Excel: (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="custom-skill-svg">
+      <rect x="4" y="3" width="16" height="18" rx="2" fill="#217346" />
+      <rect x="9" y="6" width="9" height="2" fill="#ffffff" opacity="0.82" />
+      <rect x="9" y="11" width="9" height="2" fill="#ffffff" opacity="0.72" />
+      <rect x="9" y="16" width="9" height="2" fill="#ffffff" opacity="0.72" />
+      <path d="M3 7.5 10.5 6v12L3 16.5Z" fill="#185c37" />
+      <path d="m4.9 10 1.25 2.05L7.45 10h1.4l-1.9 3 2.05 3H7.55l-1.4-2.15L4.8 16H3.4l2-3-1.9-3Z" fill="#ffffff" />
+    </svg>
+  ),
+  'Power BI': (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="custom-skill-svg">
+      <rect x="4" y="11" width="3.5" height="8" rx="1.2" fill="#f2c811" />
+      <rect x="9" y="7" width="3.5" height="12" rx="1.2" fill="#e6b800" />
+      <rect x="14" y="4" width="3.5" height="15" rx="1.2" fill="#d9a300" />
+      <path d="M4.8 20h14.4" stroke="#f6d84a" strokeWidth="1.5" strokeLinecap="round" />
+    </svg>
+  ),
+};
+
 const formatCategory = (category) =>
   categoryLabels[category] || category.charAt(0).toUpperCase() + category.slice(1);
 
 const SkillBadge = ({ skill }) => {
+  if (customIcons[skill]) {
+    return (
+      <span className="skill-badge" title={skill}>
+        <span className="skill-icon" aria-hidden="true">
+          {customIcons[skill]}
+        </span>
+        <span>{skill}</span>
+      </span>
+    );
+  }
+
   if (skillIcons[skill]) {
     return (
       <span className="skill-badge" title={skill}>

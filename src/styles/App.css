@@ -351,6 +351,12 @@ main {
   display: block;
 }
 
+.custom-skill-svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
 .skill-icon.fallback {
   border-radius: 7px;
   color: #d7d3ff;
