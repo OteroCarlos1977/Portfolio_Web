@@ -289,7 +289,90 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 12px;
+  gap: 16px;
+  overflow: hidden;
+}
+
+.project-content {
+  display: grid;
+  gap: 10px;
+}
+
+.project-content h3,
+.project-content p {
+  margin-top: 0;
+}
+
+.project-carousel {
+  display: grid;
+  gap: 10px;
+  margin: -20px -20px 0;
+}
+
+.carousel-frame {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #0b0d12;
+  border-bottom: 1px solid var(--border);
+}
+
+.carousel-frame img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--text);
+  background: rgba(15, 17, 22, 0.78);
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.carousel-control:hover {
+  background: rgba(108, 99, 255, 0.9);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.carousel-control.previous {
+  left: 10px;
+}
+
+.carousel-control.next {
+  right: 10px;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  padding: 0 14px;
+}
+
+.carousel-dots button {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.24);
+  cursor: pointer;
+}
+
+.carousel-dots button.active {
+  background: var(--accent);
 }
 
 .project-actions {
@@ -302,6 +385,31 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+}
+
+.tech-icon {
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  display: inline-grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  color: #e7e9ec;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.tech-icon img {
+  width: 21px;
+  height: 21px;
+  object-fit: contain;
+  display: block;
+}
+
+.tech-icon.fallback {
+  background: rgba(108, 99, 255, 0.15);
+  border-color: rgba(108, 99, 255, 0.24);
 }
 
 .pill {

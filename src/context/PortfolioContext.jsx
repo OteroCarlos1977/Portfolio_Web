@@ -7,10 +7,17 @@ const STORAGE_KEY = 'portfolio-data';
 const AUTH_KEY = 'portfolio-auth';
 
 const mergeProjects = (storedProjects = []) =>
-  profileData.projects.map((defaultProject) => ({
-    ...defaultProject,
-    ...(storedProjects.find((project) => project.name === defaultProject.name) || {}),
-  }));
+  profileData.projects.map((defaultProject) => {
+    const storedProject = storedProjects.find((project) => project.name === defaultProject.name) || {};
+
+    return {
+      ...defaultProject,
+      ...storedProject,
+      images: storedProject.images?.length ? storedProject.images : defaultProject.images,
+      demoUrl: storedProject.demoUrl || defaultProject.demoUrl,
+      technologies: storedProject.technologies?.length ? storedProject.technologies : defaultProject.technologies,
+    };
+  });
 
 const mergeProfileData = (storedData) => ({
   ...profileData,
