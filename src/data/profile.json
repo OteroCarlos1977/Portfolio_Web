@@ -138,11 +138,11 @@
     },
     {
       "name": "Proyecto Final COO",
-      "description": "Proyecto final académico desarrollado con React, Vite, Bootstrap, React Router y SweetAlert2.",
+      "description": "Proyecto final académico tipo e-commerce con catálogo, login, rutas protegidas, panel administrativo y carrito de compras funcional con persistencia local.",
       "caseStudy": {
-        "problem": "Representar una entrega académica como parte del recorrido técnico sin sobrecargar el portfolio.",
-        "solution": "Lo mantengo como proyecto complementario, destacando tecnologías y aprendizaje de frontend moderno.",
-        "impact": "Refuerza evolución técnica, uso de rutas, componentes y librerías visuales en React."
+        "problem": "Representar una experiencia e-commerce completa desde frontend, incluyendo navegación, autenticación simulada y compra de productos.",
+        "solution": "Implementé catálogo, filtros, login, rutas protegidas y carrito con Context API, control de cantidades, validación de stock y persistencia en localStorage.",
+        "impact": "Refuerza manejo de estado global, flujos de compra, componentes reutilizables y lógica funcional más allá de una maqueta visual."
       },
       "technologies": ["React", "Vite", "Bootstrap", "React Router"],
       "images": [

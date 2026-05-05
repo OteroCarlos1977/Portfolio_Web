@@ -1,94 +1,127 @@
 # Portfolio Web - Carlos Octavio Otero
 
-Portfolio personal desarrollado con React + Vite para presentar perfil profesional, tecnologías, proyectos destacados y canales de contacto.
+Portfolio profesional desarrollado con React + Vite para presentar perfil, tecnologias, proyectos destacados, capturas, mini casos de estudio y canales de contacto.
+
+Demo GitHub Pages: https://oterocarlos1977.github.io/Portfolio_Web/
 
 ## Objetivo
 
-Este proyecto funciona como carta de presentación técnica. La aplicación muestra una narrativa profesional clara, proyectos reales publicados en GitHub y una sección editable desde la interfaz para actualizar contenido durante el desarrollo.
+Este proyecto funciona como carta de presentacion tecnica. Resume el perfil de Carlos Octavio Otero como desarrollador Full Stack con conocimientos en Big Data, muestra proyectos reales y permite contacto directo sin abrir una aplicacion de correo externa.
 
-## Características
+## Funcionalidades
 
-- Landing profesional de una página.
-- Secciones de perfil, habilidades, proyectos y contacto.
-- Datos iniciales centralizados en `src/data/profile.json`.
-- Modo de edición local con persistencia en `localStorage`.
-- Diseño responsive con CSS propio.
-- Proyecto listo para ejecutar con Vite.
+- Hero profesional con foto de perfil y logo CO.
+- Seccion "Sobre mi".
+- Seccion "Que puedo aportar".
+- Bloque de Big Data aplicado.
+- Tarjetas de tecnologias con iconos.
+- Proyectos destacados con capturas o imagenes de muestra.
+- Carruseles automaticos con controles manuales.
+- Vista ampliada en modal para proyectos con imagenes.
+- Mini casos de estudio por proyecto: problema, solucion y aporte.
+- Botones a demo y repositorio.
+- Formulario de contacto integrado con Formspree.
+- Modo de edicion local guardado en `localStorage`.
+- Deploy automatizado en GitHub Pages con GitHub Actions.
 
-## Tecnologías
+## Tecnologias
 
 - React 18
 - Vite
 - JavaScript
 - CSS
+- PropTypes
+- Formspree
+- GitHub Pages
 - localStorage
 
-## Instalación
+## Instalacion
 
 ```bash
 npm install
 ```
 
-## Ejecución local
+## Ejecucion Local
 
 ```bash
 npm run dev
 ```
 
-La aplicación queda disponible normalmente en `http://localhost:5173`.
+La aplicacion queda disponible normalmente en:
 
-## Build de producción
+```text
+http://localhost:5173
+```
+
+## Build
 
 ```bash
 npm run build
 ```
 
-Para previsualizar el build:
+Para previsualizar:
 
 ```bash
 npm run preview
 ```
 
-## Deploy
+Para validar el build que usa GitHub Pages:
 
-### Netlify
-
-El repo incluye `netlify.toml`, por lo que Netlify puede detectar la configuración automáticamente:
-
-```text
-Build command: npm run build
-Publish directory: dist
+```bash
+GITHUB_PAGES=true npm run build
 ```
 
-La redirección `/* -> /index.html` ya está configurada para que funcionen rutas internas de React.
+## Deploy En GitHub Pages
 
-### GitHub Pages
+El repo incluye `.github/workflows/deploy-pages.yml`.
 
-El repo incluye un workflow en `.github/workflows/deploy-pages.yml`. Para activarlo:
+Para activarlo:
 
 1. Ir a `Settings > Pages`.
 2. En `Build and deployment`, elegir `GitHub Actions`.
 3. Hacer push a `main` o ejecutar manualmente el workflow.
 
-La URL esperada será:
+## Estructura
 
 ```text
-https://oterocarlos1977.github.io/Portfolio_Web/
-```
-
-## Estructura principal
-
-```text
+public/
+  projects/             Capturas e imagenes de proyectos
 src/
-  components/          Componentes visuales del portfolio
-  context/             Estado global y edición local
-  data/profile.json    Contenido inicial del perfil
-  styles/App.css       Estilos principales
+  components/           Componentes visuales del portfolio
+  context/              Estado global y edicion local
+  data/profile.json     Contenido inicial del perfil
+  styles/App.css        Estilos principales
 ```
 
-## Modo edición
+## Contenido Editable
 
-El portfolio incluye un login local para editar contenido desde la interfaz durante el desarrollo.
+El contenido principal esta centralizado en:
+
+```text
+src/data/profile.json
+```
+
+Desde ahi se pueden modificar:
+
+- Nombre, titulo y presentacion.
+- Secciones de aporte profesional.
+- Stack tecnico.
+- Proyectos, demos, repositorios e imagenes.
+- Endpoint de contacto de Formspree.
+
+## Contacto
+
+El formulario usa Formspree:
+
+```text
+https://formspree.io/f/mrejqwar
+```
+
+El email se almacena dividido en usuario y dominio para reducir exposicion directa en el codigo.
+
+## Modo Edicion
+
+El portfolio incluye un login local para editar contenido desde la interfaz durante desarrollo.
 
 Credenciales demo:
 
@@ -97,12 +130,20 @@ Usuario: carlos
 Password: 1234
 ```
 
-Los cambios se guardan en `localStorage`, por lo que no modifican automáticamente el archivo `profile.json`. Para publicar cambios permanentes, actualizar `src/data/profile.json` y volver a desplegar.
+Los cambios se guardan en `localStorage`; no modifican automaticamente `src/data/profile.json`. Para publicar cambios permanentes, actualizar el JSON y volver a desplegar.
 
-## Próximas mejoras recomendadas
+## Proyectos Destacados
 
-- Publicar una URL de demo y enlazarla desde el perfil de GitHub.
-- Agregar capturas del portfolio al README.
-- Reemplazar el modo edición local por un CMS simple o backend autenticado si se necesita edición real en producción.
-- Incorporar pruebas básicas de renderizado.
-- Mejorar SEO con metadatos Open Graph y favicon propio.
+- Turnero Hospital.
+- Catalogo de Peliculas CRUD.
+- Portfolio Web.
+- Estudio Juridico React.
+- Proyecto Final COO, con carrito de compras funcional.
+
+## Mejoras Recomendadas
+
+- Agregar CV descargable.
+- Agregar capturas reales del Turnero y del Portfolio, reemplazando imagenes de muestra.
+- Revisar envio real del formulario desde el deploy.
+- Agregar metadatos Open Graph.
+- Incorporar tests basicos de renderizado.
