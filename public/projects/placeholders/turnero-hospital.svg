@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Vista de muestra Turnero Hospital</title>
+  <desc id="desc">Representacion visual del sistema de turnos medicos.</desc>
+  <rect width="1280" height="720" fill="#f4f7f9"/>
+  <rect x="0" y="0" width="1280" height="98" fill="#ffffff"/>
+  <rect x="0" y="97" width="1280" height="1" fill="#d8e0e6"/>
+  <rect x="56" y="26" width="178" height="46" rx="12" fill="#e4f1f3"/>
+  <circle cx="88" cy="49" r="16" fill="#256f7d"/>
+  <path d="M88 38v22M77 49h22" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
+  <text x="116" y="55" fill="#17202a" font-family="Arial, sans-serif" font-size="24" font-weight="700">Turnero</text>
+  <rect x="1068" y="28" width="142" height="42" rx="10" fill="#256f7d"/>
+  <text x="1100" y="56" fill="#ffffff" font-family="Arial, sans-serif" font-size="18" font-weight="700">Ingresar</text>
+  <rect x="82" y="156" width="1116" height="454" rx="28" fill="#256f7d"/>
+  <path d="M82 156h1116v454H82z" fill="url(#panel)"/>
+  <text x="136" y="248" fill="#ffffff" font-family="Arial, sans-serif" font-size="54" font-weight="800">Gestion de turnos medicos</text>
+  <text x="138" y="300" fill="#d7f3f7" font-family="Arial, sans-serif" font-size="24">Especialidades, pacientes, reservas y panel administrativo.</text>
+  <rect x="138" y="366" width="238" height="64" rx="14" fill="#c58b44"/>
+  <text x="177" y="407" fill="#17202a" font-family="Arial, sans-serif" font-size="21" font-weight="800">Solicitar turno</text>
+  <rect x="410" y="366" width="238" height="64" rx="14" fill="#ffffff" opacity="0.94"/>
+  <text x="452" y="407" fill="#256f7d" font-family="Arial, sans-serif" font-size="21" font-weight="800">Ver turnos</text>
+  <rect x="760" y="220" width="340" height="302" rx="22" fill="#ffffff" opacity="0.18"/>
+  <rect x="800" y="258" width="260" height="28" rx="8" fill="#ffffff" opacity="0.72"/>
+  <rect x="800" y="318" width="260" height="28" rx="8" fill="#ffffff" opacity="0.46"/>
+  <rect x="800" y="378" width="260" height="28" rx="8" fill="#ffffff" opacity="0.46"/>
+  <rect x="800" y="438" width="172" height="48" rx="12" fill="#c58b44"/>
+  <defs>
+    <linearGradient id="panel" x1="82" x2="1198" y1="156" y2="610" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#256f7d"/>
+      <stop offset="1" stop-color="#17202a"/>
+    </linearGradient>
+  </defs>
+</svg>

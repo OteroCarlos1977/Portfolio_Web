@@ -43,6 +43,12 @@
         "impact": "Muestra capacidad para modelar procesos de atención, validar datos y presentar una solución funcional para uso institucional."
       },
       "technologies": ["React", "Vite", "Node.js", "Express", "MySQL"],
+      "images": [
+        {
+          "src": "projects/placeholders/turnero-hospital.svg",
+          "alt": "Vista de muestra del turnero hospitalario"
+        }
+      ],
       "repoUrl": "https://github.com/OteroCarlos1977/turnero_hospital",
       "demoUrl": "https://turnero-hospital-two.vercel.app/"
     },
@@ -89,6 +95,12 @@
         "impact": "Funciona como carta de presentación técnica y permite mostrar proyectos con contexto, demo y repositorio."
       },
       "technologies": ["React", "Vite", "CSS", "localStorage"],
+      "images": [
+        {
+          "src": "projects/placeholders/portfolio-web.svg",
+          "alt": "Vista de muestra del portfolio web"
+        }
+      ],
       "repoUrl": "https://github.com/OteroCarlos1977/Portfolio_Web"
     },
     {
@@ -133,6 +145,12 @@
         "impact": "Refuerza evolución técnica, uso de rutas, componentes y librerías visuales en React."
       },
       "technologies": ["React", "Vite", "Bootstrap", "React Router"],
+      "images": [
+        {
+          "src": "projects/coo/proyecto-final-coo.png",
+          "alt": "Vista principal del Proyecto Final COO"
+        }
+      ],
       "repoUrl": "https://github.com/OteroCarlos1977/proyecto_final_COO"
     }
   ],
