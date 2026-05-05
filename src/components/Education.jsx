@@ -4,7 +4,7 @@ const Education = ({ education }) => (
   <section className="section education-section" id="education">
     <div className="section-header">
       <p className="eyebrow">Formación</p>
-      <h2>Capacitación y certificaciones</h2>
+      <h2>Formación técnica y profesional</h2>
     </div>
     <div className="education-grid">
       {education.map((item) => (

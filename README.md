@@ -15,7 +15,7 @@ Este proyecto funciona como carta de presentacion tecnica. Resume el perfil de C
 - Seccion "Que puedo aportar".
 - Bloque de Big Data aplicado.
 - Seccion de habilidades blandas y forma de trabajo.
-- Seccion de formacion y certificaciones.
+- Seccion de formacion tecnica y profesional.
 - Tarjetas de tecnologias con iconos.
 - Proyectos destacados con capturas o imagenes de muestra.
 - Carruseles automaticos con controles manuales.
@@ -108,7 +108,7 @@ Desde ahi se pueden modificar:
 - Nombre, titulo y presentacion.
 - Secciones de aporte profesional.
 - Habilidades blandas.
-- Formacion y certificaciones.
+- Formacion tecnica y profesional.
 - Stack tecnico.
 - Proyectos, demos, repositorios e imagenes.
 - Endpoint de contacto de Formspree.

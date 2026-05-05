@@ -53,28 +53,28 @@
       "type": "Formación académica",
       "title": "Técnico Superior en Programación",
       "institution": "Teclab",
-      "description": "Título obtenido en 2024, respaldado por analítico y título disponibles en documentación académica."
+      "description": "Título obtenido en 2024. Formación orientada al desarrollo de software, lógica de programación, bases de datos y construcción de aplicaciones."
     },
     {
-      "type": "Certificación",
+      "type": "Capacitación",
       "title": "Full Stack JS Node.js",
       "institution": "Codo a Codo",
       "description": "Capacitación realizada entre marzo de 2024 y julio de 2024."
     },
     {
-      "type": "Certificación",
+      "type": "Capacitación",
       "title": "Desarrollo Web Front-End",
       "institution": "Argentina Programa 4.0",
-      "description": "Certificación orientada a bases de desarrollo web frontend, maquetación e implementación de interfaces."
+      "description": "Formación orientada a desarrollo web frontend, maquetación e implementación de interfaces."
     },
     {
-      "type": "Certificación",
+      "type": "Capacitación",
       "title": "Big Data",
       "institution": "Codo a Codo",
       "description": "Formación realizada entre marzo de 2023 y julio de 2023, vinculada a análisis y procesamiento de datos."
     },
     {
-      "type": "Certificación",
+      "type": "Capacitación",
       "title": "Java, POO, algoritmos y bases de datos SQL",
       "institution": "TodoCode",
       "description": "Capacitaciones complementarias en lógica de programación, Java principiante, programación orientada a objetos, Git/GitHub y bases de datos SQL."
@@ -82,8 +82,8 @@
     {
       "type": "Idiomas",
       "title": "Inglés y Francés",
-      "institution": "CUI y certificaciones complementarias",
-      "description": "El CV de referencia indica nivel bueno en inglés y francés. Certificados disponibles para respaldo."
+      "institution": "Formación complementaria",
+      "description": "Nivel bueno de lectura y comprensión general en inglés y francés."
     }
   ],
   "skills": {
