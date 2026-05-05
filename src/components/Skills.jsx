@@ -24,6 +24,10 @@ const skillIcons = {
   GitHub: 'https://cdn.simpleicons.org/github/FFFFFF',
   Vercel: 'https://cdn.simpleicons.org/vercel/FFFFFF',
   npm: 'https://cdn.simpleicons.org/npm/CB3837',
+  ChatGPT: 'https://cdn.simpleicons.org/openai/FFFFFF',
+  Gemini: 'https://cdn.simpleicons.org/googlegemini/8E75B2',
+  'GitHub Copilot': 'https://cdn.simpleicons.org/githubcopilot/FFFFFF',
+  'Microsoft Copilot': 'https://cdn.simpleicons.org/microsoft/5E5E5E',
   'Google Sheets': 'https://cdn.simpleicons.org/googlesheets/34A853',
   Python: 'https://cdn.simpleicons.org/python/3776AB',
   Looker: 'https://cdn.simpleicons.org/looker/4285F4',
@@ -34,6 +38,7 @@ const fallbackIcons = {
   'APIs REST': 'API',
   localStorage: 'LS',
   'Big Data': 'BD',
+  Codex: 'CX',
 };
 
 const customIcons = {

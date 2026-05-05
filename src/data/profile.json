@@ -10,7 +10,7 @@
     "backend": ["Node.js", "Express", "APIs REST", "JWT"],
     "databases": ["MySQL", "SQLite", "localStorage"],
     "data": ["Excel", "Google Sheets", "Python", "Power BI", "Looker", "Google Colab"],
-    "tools": ["Git", "GitHub", "Vercel", "npm"]
+    "tools": ["Git", "GitHub", "Vercel", "npm", "Codex", "ChatGPT", "Gemini", "GitHub Copilot", "Microsoft Copilot"]
   },
   "projects": [
     {
