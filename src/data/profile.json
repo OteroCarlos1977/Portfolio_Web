@@ -51,9 +51,15 @@
   "education": [
     {
       "type": "Formación académica",
-      "title": "Formación técnica en programación",
+      "title": "Técnico Superior en Programación",
       "institution": "Teclab",
-      "description": "Analítico disponible en la carpeta de certificados. Pendiente confirmar título exacto, estado y fechas para el CV final."
+      "description": "Formación iniciada en marzo de 2023 y actualmente en curso, según CV de referencia."
+    },
+    {
+      "type": "Certificación",
+      "title": "Full Stack JS Node.js",
+      "institution": "Codo a Codo",
+      "description": "Capacitación realizada entre marzo de 2024 y julio de 2024."
     },
     {
       "type": "Certificación",
@@ -65,25 +71,25 @@
       "type": "Certificación",
       "title": "Big Data",
       "institution": "Codo a Codo",
-      "description": "Formación vinculada a análisis de datos, procesamiento de información y herramientas para trabajo con datos."
+      "description": "Formación realizada entre marzo de 2023 y julio de 2023, vinculada a análisis y procesamiento de datos."
     },
     {
       "type": "Certificación",
-      "title": "Java, POO, algoritmos y bases de datos",
+      "title": "Java, POO, algoritmos y bases de datos SQL",
       "institution": "TodoCode",
-      "description": "Capacitaciones complementarias en lógica de programación, Java principiante, programación orientada a objetos y bases de datos."
+      "description": "Capacitaciones complementarias en lógica de programación, Java principiante, programación orientada a objetos, Git/GitHub y bases de datos SQL."
     },
     {
       "type": "Idiomas",
-      "title": "Inglés y Francés Nivel II",
+      "title": "Inglés y Francés",
       "institution": "CUI y certificaciones complementarias",
-      "description": "Certificados disponibles para respaldar formación en idiomas. Pendiente confirmar nivel final y fechas."
+      "description": "El CV de referencia indica nivel bueno en inglés y francés. Certificados disponibles para respaldo."
     },
     {
-      "type": "Herramientas",
-      "title": "Introducción a Git, HTML y CSS",
-      "institution": "Certificaciones complementarias",
-      "description": "Formación de apoyo para control de versiones, estructura web y estilos."
+      "type": "Formación técnica",
+      "title": "Técnico Electromecánico",
+      "institution": "E.N.E.T. Nº 1 de Berazategui",
+      "description": "Formación técnica de base finalizada en diciembre de 1995, según CV de referencia."
     }
   ],
   "skills": {
