@@ -53,7 +53,7 @@
       "type": "Formación académica",
       "title": "Técnico Superior en Programación",
       "institution": "Teclab",
-      "description": "Formación iniciada en marzo de 2023 y actualmente en curso, según CV de referencia."
+      "description": "Título obtenido en 2024, respaldado por analítico y título disponibles en documentación académica."
     },
     {
       "type": "Certificación",
@@ -84,12 +84,6 @@
       "title": "Inglés y Francés",
       "institution": "CUI y certificaciones complementarias",
       "description": "El CV de referencia indica nivel bueno en inglés y francés. Certificados disponibles para respaldo."
-    },
-    {
-      "type": "Formación técnica",
-      "title": "Técnico Electromecánico",
-      "institution": "E.N.E.T. Nº 1 de Berazategui",
-      "description": "Formación técnica de base finalizada en diciembre de 1995, según CV de referencia."
     }
   ],
   "skills": {
