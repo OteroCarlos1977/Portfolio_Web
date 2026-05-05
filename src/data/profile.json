@@ -26,6 +26,28 @@
     "title": "Big Data aplicado a procesos cotidianos",
     "description": "Trabajo con Excel, Google Sheets, Python, Power BI, Looker y Google Colab para limpiar datos, detectar patrones, preparar reportes y construir tableros que ayuden a entender mejor la operación."
   },
+  "softSkills": [
+    {
+      "icon": "CL",
+      "title": "Comunicación clara",
+      "description": "Me enfoco en explicar avances, bloqueos y decisiones técnicas de forma concreta para facilitar el trabajo en equipo."
+    },
+    {
+      "icon": "PR",
+      "title": "Resolución de problemas",
+      "description": "Analizo el flujo completo, identifico causas y busco soluciones simples que puedan sostenerse y mantenerse."
+    },
+    {
+      "icon": "OR",
+      "title": "Organización",
+      "description": "Ordeno tareas, documentación y prioridades para avanzar con criterio y reducir retrabajo."
+    },
+    {
+      "icon": "AD",
+      "title": "Aprendizaje continuo",
+      "description": "Incorporo herramientas, buenas prácticas y nuevas tecnologías cuando aportan valor real al proyecto."
+    }
+  ],
   "skills": {
     "frontend": ["HTML", "CSS", "JavaScript", "React", "Vite", "Bootstrap"],
     "backend": ["Node.js", "Express", "APIs REST", "JWT"],

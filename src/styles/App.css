@@ -338,6 +338,51 @@ main {
   background: rgba(36, 214, 203, 0.07);
 }
 
+.soft-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.soft-skill-card {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.soft-skill-icon {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid rgba(36, 214, 203, 0.24);
+  border-radius: 12px;
+  background: rgba(36, 214, 203, 0.11);
+  color: #eafffd;
+  font-size: 11px;
+  font-weight: 850;
+}
+
+.soft-skill-card h3,
+.soft-skill-card p {
+  margin: 0;
+}
+
+.soft-skill-card h3 {
+  margin-bottom: 6px;
+}
+
+.soft-skill-card p {
+  color: #c6ccdb;
+}
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -897,7 +942,8 @@ textarea {
   }
 
   .value-grid,
-  .data-focus {
+  .data-focus,
+  .soft-skills-grid {
     grid-template-columns: 1fr;
   }
 
