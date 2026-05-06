@@ -110,6 +110,12 @@
       "technologies": ["React", "Node.js", "SQLite"],
       "images": [
         {
+          "type": "video",
+          "src": "projects/juridica/juridica-demo.mp4",
+          "poster": "projects/juridica/appjuridicadashboard.png",
+          "alt": "Video demo de la aplicación jurídica"
+        },
+        {
           "src": "projects/juridica/appjuridicadashboard.png",
           "alt": "Dashboard principal de la aplicación jurídica"
         },
@@ -142,6 +148,12 @@
       },
       "technologies": ["React", "Vite", "Node.js", "Express", "MySQL"],
       "images": [
+        {
+          "type": "video",
+          "src": "projects/turnero/turnero-demo.mp4",
+          "poster": "projects/turnero/inicio.png",
+          "alt": "Video demo del Turnero Hospital"
+        },
         {
           "src": "projects/turnero/inicio.png",
           "alt": "Pantalla principal del Turnero Hospital"
@@ -200,6 +212,12 @@
       },
       "technologies": ["JavaScript", "Node.js", "Express", "SQLite", "Multer"],
       "images": [
+        {
+          "type": "video",
+          "src": "projects/peliculas/peliculas-demo.mp4",
+          "poster": "projects/peliculas/paginaprincipal_admin.png",
+          "alt": "Video demo del catálogo de películas"
+        },
         {
           "src": "projects/peliculas/paginaprincipal_admin.png",
           "alt": "Panel principal de administrador del catálogo de películas"

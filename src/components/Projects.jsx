@@ -45,9 +45,11 @@ const ProjectCarousel = ({ images, projectName, expanded }) => {
   const [active, setActive] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const imageCount = images?.length || 0;
+  const activeItem = images?.[active];
+  const isActiveVideo = Boolean(activeItem && (activeItem.type === 'video' || /\.(mp4|webm|mov)$/i.test(activeItem.src)));
 
   useEffect(() => {
-    if (isPaused || imageCount < 2) {
+    if (isPaused || isActiveVideo || imageCount < 2) {
       return undefined;
     }
 
@@ -56,7 +58,7 @@ const ProjectCarousel = ({ images, projectName, expanded }) => {
     }, expanded ? 4200 : 3200);
 
     return () => window.clearInterval(interval);
-  }, [expanded, imageCount, isPaused]);
+  }, [expanded, imageCount, isActiveVideo, isPaused]);
 
   if (!imageCount) {
     return null;
@@ -67,7 +69,7 @@ const ProjectCarousel = ({ images, projectName, expanded }) => {
   };
 
   const image = images[active];
-  const isVideo = image.type === 'video' || /\.(mp4|webm|mov)$/i.test(image.src);
+  const isVideo = isActiveVideo;
 
   return (
     <div
@@ -82,7 +84,11 @@ const ProjectCarousel = ({ images, projectName, expanded }) => {
           <video
             src={publicAsset(image.src)}
             poster={image.poster ? publicAsset(image.poster) : undefined}
-            controls
+            autoPlay={!expanded}
+            controls={expanded}
+            loop={!expanded}
+            muted
+            playsInline
             preload="metadata"
             aria-label={image.alt || `${projectName} video ${active + 1}`}
           />
