@@ -20,12 +20,16 @@ Este proyecto funciona como carta de presentacion tecnica. Resume el perfil de C
 - Tarjetas de tecnologias con iconos.
 - Proyectos destacados con videos demo breves.
 - Vista ampliada en modal para proyectos con material visual.
+- Cards de proyectos accesibles por teclado.
+- Videos optimizados para no reproducirse en las tarjetas chicas y activarse en la vista ampliada.
 - Mini casos de estudio por proyecto: problema, solucion y aporte.
 - Botones a demo y repositorio.
 - Boton de descarga de CV actualizado desde Google Drive.
 - Accesos de contacto con iconos para GitHub, LinkedIn, WhatsApp, email y CV.
 - Formulario de contacto integrado con Formspree, sin abrir una aplicacion externa de correo.
+- Modales con cierre por `Escape` y bloqueo de scroll del fondo.
 - Metadatos Open Graph para compartir el portfolio con vista previa profesional.
+- Ajustes de accesibilidad visual con `focus-visible` y soporte para usuarios con reduccion de movimiento.
 - Deploy automatizado en GitHub Pages con GitHub Actions.
 
 ## Tecnologias
@@ -101,6 +105,7 @@ src/
   components/           Componentes visuales del portfolio
   data/profile.json     Contenido inicial del perfil
   styles/App.css        Estilos principales
+  utils/assets.js        Resolucion de rutas publicas para assets locales y externos
 ```
 
 ## Contenido Editable
@@ -144,3 +149,4 @@ El email se almacena dividido en usuario y dominio para reducir exposicion direc
 
 - Revisar envio real del formulario desde el deploy.
 - Incorporar tests de renderizado con React Testing Library si el proyecto crece en interacciones.
+- Sumar auditoria Lighthouse despues de cada cambio visual importante.
