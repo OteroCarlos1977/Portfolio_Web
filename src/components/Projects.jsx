@@ -41,108 +41,39 @@ TechIcon.propTypes = {
   tech: PropTypes.string.isRequired,
 };
 
-const ProjectCarousel = ({ images, projectName, expanded }) => {
-  const [active, setActive] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
-  const imageCount = images?.length || 0;
-  const activeItem = images?.[active];
-  const isActiveVideo = Boolean(activeItem && (activeItem.type === 'video' || /\.(mp4|webm|mov)$/i.test(activeItem.src)));
+const ProjectMedia = ({ images, projectName, expanded }) => {
+  const media = images?.[0];
 
-  useEffect(() => {
-    if (isPaused || isActiveVideo || imageCount < 2) {
-      return undefined;
-    }
-
-    const interval = window.setInterval(() => {
-      setActive((current) => (current + 1) % imageCount);
-    }, expanded ? 4200 : 3200);
-
-    return () => window.clearInterval(interval);
-  }, [expanded, imageCount, isActiveVideo, isPaused]);
-
-  if (!imageCount) {
+  if (!media) {
     return null;
   }
 
-  const goTo = (direction) => {
-    setActive((current) => (current + direction + imageCount) % imageCount);
-  };
-
-  const image = images[active];
-  const isVideo = isActiveVideo;
+  const isVideo = media.type === 'video' || /\.(mp4|webm|mov)$/i.test(media.src);
 
   return (
-    <div
-      className="project-carousel"
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
-      onFocus={() => setIsPaused(true)}
-      onBlur={() => setIsPaused(false)}
-    >
-      <div className="carousel-frame">
+    <div className="project-media">
+      <div className="media-frame">
         {isVideo ? (
           <video
-            src={publicAsset(image.src)}
-            poster={image.poster ? publicAsset(image.poster) : undefined}
+            src={publicAsset(media.src)}
+            poster={media.poster ? publicAsset(media.poster) : undefined}
             autoPlay
             controls={expanded}
             loop
             muted
             playsInline
             preload="metadata"
-            aria-label={image.alt || `${projectName} video ${active + 1}`}
+            aria-label={media.alt || `Video demo de ${projectName}`}
           />
         ) : (
-          <img src={publicAsset(image.src)} alt={image.alt || `${projectName} captura ${active + 1}`} loading="lazy" />
-        )}
-        {images.length > 1 && (
-          <>
-            <button
-              className="carousel-control previous"
-              type="button"
-              onClick={(event) => {
-                event.stopPropagation();
-                goTo(-1);
-              }}
-              aria-label="Imagen anterior"
-            >
-              {'<'}
-            </button>
-            <button
-              className="carousel-control next"
-              type="button"
-              onClick={(event) => {
-                event.stopPropagation();
-                goTo(1);
-              }}
-              aria-label="Imagen siguiente"
-            >
-              {'>'}
-            </button>
-          </>
+          <img src={publicAsset(media.src)} alt={media.alt || `Captura de ${projectName}`} loading="lazy" />
         )}
       </div>
-      {images.length > 1 && (
-        <div className="carousel-dots" aria-label={`Capturas de ${projectName}`}>
-          {images.map((item, index) => (
-            <button
-              className={index === active ? 'active' : ''}
-              type="button"
-              key={item.src}
-              onClick={(event) => {
-                event.stopPropagation();
-                setActive(index);
-              }}
-              aria-label={`Ver material ${index + 1}`}
-            />
-          ))}
-        </div>
-      )}
     </div>
   );
 };
 
-ProjectCarousel.propTypes = {
+ProjectMedia.propTypes = {
   images: PropTypes.arrayOf(
     PropTypes.shape({
       src: PropTypes.string.isRequired,
@@ -155,7 +86,7 @@ ProjectCarousel.propTypes = {
   expanded: PropTypes.bool,
 };
 
-ProjectCarousel.defaultProps = {
+ProjectMedia.defaultProps = {
   images: [],
   expanded: false,
 };
@@ -207,7 +138,7 @@ const Projects = ({ projects }) => {
                 }
               }}
             >
-              <ProjectCarousel images={project.images} projectName={project.name} />
+              <ProjectMedia images={project.images} projectName={project.name} />
               <div className="project-content">
                 <div className="project-title-row">
                   <h3>{project.name}</h3>
@@ -268,7 +199,7 @@ const Projects = ({ projects }) => {
                 x
               </button>
             </div>
-            <ProjectCarousel images={expandedProject.images} projectName={expandedProject.name} expanded />
+            <ProjectMedia images={expandedProject.images} projectName={expandedProject.name} expanded />
             <p className="section-text small">{expandedProject.description}</p>
             {expandedProject.caseStudy && (
               <div className="case-study" aria-label={`Caso de estudio de ${expandedProject.name}`}>

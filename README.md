@@ -19,12 +19,12 @@ Este proyecto funciona como carta de presentacion tecnica. Resume el perfil de C
 - Seccion de formacion tecnica y profesional.
 - Tarjetas de tecnologias con iconos.
 - Proyectos destacados con videos demo breves.
-- Videos demo breves en tarjetas de proyectos principales.
 - Vista ampliada en modal para proyectos con material visual.
 - Mini casos de estudio por proyecto: problema, solucion y aporte.
 - Botones a demo y repositorio.
 - Boton de descarga de CV actualizado desde Google Drive.
-- Formulario de contacto integrado con Formspree.
+- Accesos de contacto con iconos para GitHub, LinkedIn, WhatsApp, email y CV.
+- Formulario de contacto integrado con Formspree, sin abrir una aplicacion externa de correo.
 - Metadatos Open Graph para compartir el portfolio con vista previa profesional.
 - Deploy automatizado en GitHub Pages con GitHub Actions.
 
@@ -112,6 +112,7 @@ Desde ahi se pueden modificar:
 - Stack tecnico.
 - Proyectos, demos, repositorios y videos.
 - Endpoint de contacto de Formspree.
+- Numero y mensaje inicial de WhatsApp.
 
 ## Contacto
 
