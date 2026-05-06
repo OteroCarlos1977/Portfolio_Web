@@ -74,6 +74,14 @@ Para validar el build que usa GitHub Pages:
 GITHUB_PAGES=true npm run build
 ```
 
+## Tests
+
+```bash
+npm test
+```
+
+Los tests validan datos principales del perfil, proyectos destacados, assets referenciados, contacto, metadatos Open Graph e iconos críticos del stack.
+
 ## Deploy En GitHub Pages
 
 El repo incluye `.github/workflows/deploy-pages.yml`.
@@ -135,4 +143,4 @@ El email se almacena dividido en usuario y dominio para reducir exposicion direc
 ## Mejoras Recomendadas
 
 - Revisar envio real del formulario desde el deploy.
-- Incorporar tests basicos de renderizado.
+- Incorporar tests de renderizado con React Testing Library si el proyecto crece en interacciones.
