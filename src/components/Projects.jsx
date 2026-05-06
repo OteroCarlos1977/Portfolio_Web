@@ -7,6 +7,7 @@ const techIcons = {
   Bootstrap: 'https://cdn.simpleicons.org/bootstrap/7952B3',
   CSS: 'https://cdn.simpleicons.org/css/1572B6',
   Express: 'https://cdn.simpleicons.org/express/FFFFFF',
+  Formspree: 'https://cdn.simpleicons.org/formspree/E5126F',
   JavaScript: 'https://cdn.simpleicons.org/javascript/F7DF1E',
   MySQL: 'https://cdn.simpleicons.org/mysql/4479A1',
   'Node.js': 'https://cdn.simpleicons.org/nodedotjs/5FA04E',
