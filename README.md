@@ -18,10 +18,9 @@ Este proyecto funciona como carta de presentacion tecnica. Resume el perfil de C
 - Seccion de habilidades blandas y forma de trabajo.
 - Seccion de formacion tecnica y profesional.
 - Tarjetas de tecnologias con iconos.
-- Proyectos destacados con capturas o imagenes de muestra.
+- Proyectos destacados con videos demo breves.
 - Videos demo breves en tarjetas de proyectos principales.
-- Carruseles automaticos con controles manuales.
-- Vista ampliada en modal para proyectos con imagenes.
+- Vista ampliada en modal para proyectos con material visual.
 - Mini casos de estudio por proyecto: problema, solucion y aporte.
 - Botones a demo y repositorio.
 - Boton de descarga de CV actualizado desde Google Drive.
