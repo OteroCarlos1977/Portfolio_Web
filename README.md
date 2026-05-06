@@ -148,7 +148,6 @@ Los cambios se guardan en `localStorage`; no modifican automaticamente `src/data
 
 ## Mejoras Recomendadas
 
-- Sumar mas capturas reales del Turnero si se quiere mostrar el flujo completo de reserva.
-- Revisar envio real del formulario desde el deploy.
 - Agregar metadatos Open Graph.
+- Revisar envio real del formulario desde el deploy.
 - Incorporar tests basicos de renderizado.

@@ -143,8 +143,48 @@
       "technologies": ["React", "Vite", "Node.js", "Express", "MySQL"],
       "images": [
         {
-          "src": "projects/turnero/turnero-home.png",
-          "alt": "Pantalla principal del Turnero Hospital desplegado en Vercel"
+          "src": "projects/turnero/inicio.png",
+          "alt": "Pantalla principal del Turnero Hospital"
+        },
+        {
+          "src": "projects/turnero/seleccion_especialidad.png",
+          "alt": "Selección de especialidad médica"
+        },
+        {
+          "src": "projects/turnero/seleccion_diahorario.png",
+          "alt": "Selección de día y horario disponible"
+        },
+        {
+          "src": "projects/turnero/carga_datos.png",
+          "alt": "Carga de datos del paciente"
+        },
+        {
+          "src": "projects/turnero/confirmacion_datos.png",
+          "alt": "Confirmación de datos del turno"
+        },
+        {
+          "src": "projects/turnero/mensaje_final.png",
+          "alt": "Mensaje final de reserva de turno"
+        },
+        {
+          "src": "projects/turnero/busqueda_turno.png",
+          "alt": "Búsqueda de turno por documento"
+        },
+        {
+          "src": "projects/turnero/resultado_busqueda.png",
+          "alt": "Resultado de búsqueda de turno"
+        },
+        {
+          "src": "projects/turnero/administracion_CRUD_medicos.png",
+          "alt": "Panel de administración de médicos"
+        },
+        {
+          "src": "projects/turnero/administracion_CRUD_especialidades.png",
+          "alt": "Panel de administración de especialidades"
+        },
+        {
+          "src": "projects/turnero/administracion_CRUD_usuarios.png",
+          "alt": "Panel de administración de usuarios"
         }
       ],
       "repoUrl": "https://github.com/OteroCarlos1977/turnero_hospital",
