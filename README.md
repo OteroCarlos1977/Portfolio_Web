@@ -1,6 +1,6 @@
 # Portfolio Web - Carlos Octavio Otero
 
-Portfolio profesional desarrollado con React + Vite para presentar perfil, tecnologias, proyectos destacados, capturas, mini casos de estudio y canales de contacto.
+Portfolio profesional desarrollado con React + Vite para presentar perfil, tecnologias, proyectos destacados, videos demo, mini casos de estudio y canales de contacto.
 
 Demo GitHub Pages: https://oterocarlos1977.github.io/Portfolio_Web/
 
@@ -25,7 +25,7 @@ Este proyecto funciona como carta de presentacion tecnica. Resume el perfil de C
 - Botones a demo y repositorio.
 - Boton de descarga de CV actualizado desde Google Drive.
 - Formulario de contacto integrado con Formspree.
-- Modo de edicion local guardado en `localStorage`.
+- Metadatos Open Graph para compartir el portfolio con vista previa profesional.
 - Deploy automatizado en GitHub Pages con GitHub Actions.
 
 ## Tecnologias
@@ -37,7 +37,6 @@ Este proyecto funciona como carta de presentacion tecnica. Resume el perfil de C
 - PropTypes
 - Formspree
 - GitHub Pages
-- localStorage
 
 ## Instalacion
 
@@ -89,10 +88,9 @@ Para activarlo:
 
 ```text
 public/
-  projects/             Capturas e imagenes de proyectos
+  projects/             Videos demo y material visual de proyectos
 src/
   components/           Componentes visuales del portfolio
-  context/              Estado global y edicion local
   data/profile.json     Contenido inicial del perfil
   styles/App.css        Estilos principales
 ```
@@ -112,7 +110,7 @@ Desde ahi se pueden modificar:
 - Habilidades blandas.
 - Formacion tecnica y profesional.
 - Stack tecnico.
-- Proyectos, demos, repositorios e imagenes.
+- Proyectos, demos, repositorios y videos.
 - Endpoint de contacto de Formspree.
 
 ## Contacto
@@ -125,19 +123,6 @@ https://formspree.io/f/mrejqwar
 
 El email se almacena dividido en usuario y dominio para reducir exposicion directa en el codigo.
 
-## Modo Edicion
-
-El portfolio incluye un login local para editar contenido desde la interfaz durante desarrollo.
-
-Credenciales demo:
-
-```text
-Usuario: carlos
-Password: 1234
-```
-
-Los cambios se guardan en `localStorage`; no modifican automaticamente `src/data/profile.json`. Para publicar cambios permanentes, actualizar el JSON y volver a desplegar.
-
 ## Proyectos Destacados
 
 - Estudio Juridico React.
@@ -148,6 +133,5 @@ Los cambios se guardan en `localStorage`; no modifican automaticamente `src/data
 
 ## Mejoras Recomendadas
 
-- Agregar metadatos Open Graph.
 - Revisar envio real del formulario desde el deploy.
 - Incorporar tests basicos de renderizado.

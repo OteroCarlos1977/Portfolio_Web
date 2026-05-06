@@ -175,13 +175,13 @@
     },
     {
       "name": "Portfolio Web",
-      "description": "Portfolio personal con secciones de perfil, habilidades, proyectos y contacto. Incluye modo de edición local para actualizar contenido durante el desarrollo.",
+      "description": "Portfolio personal con secciones de perfil, habilidades, proyectos, formación, videos demo y contacto directo mediante formulario.",
       "caseStudy": {
         "problem": "Era necesario centralizar presentación profesional, proyectos, tecnologías y contacto en una sola experiencia.",
         "solution": "Desarrollé un portfolio en React con datos estructurados, contacto vía Formspree, videos demo y publicación en GitHub Pages.",
         "impact": "Funciona como carta de presentación técnica y permite mostrar proyectos con contexto, demo y repositorio."
       },
-      "technologies": ["React", "Vite", "CSS", "localStorage"],
+      "technologies": ["React", "Vite", "CSS", "Formspree"],
       "images": [
         {
           "src": "projects/portfolio/portfolio-home.png",
