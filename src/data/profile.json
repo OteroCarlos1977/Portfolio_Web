@@ -143,8 +143,8 @@
       "technologies": ["React", "Vite", "Node.js", "Express", "MySQL"],
       "images": [
         {
-          "src": "projects/placeholders/turnero-hospital.svg",
-          "alt": "Vista de muestra del turnero hospitalario"
+          "src": "projects/turnero/turnero-home.png",
+          "alt": "Pantalla principal del Turnero Hospital desplegado en Vercel"
         }
       ],
       "repoUrl": "https://github.com/OteroCarlos1977/turnero_hospital",
@@ -212,8 +212,8 @@
       "technologies": ["React", "Vite", "CSS", "localStorage"],
       "images": [
         {
-          "src": "projects/placeholders/portfolio-web.svg",
-          "alt": "Vista de muestra del portfolio web"
+          "src": "projects/portfolio/portfolio-home.png",
+          "alt": "Pantalla principal del portfolio web publicado"
         }
       ],
       "repoUrl": "https://github.com/OteroCarlos1977/Portfolio_Web"

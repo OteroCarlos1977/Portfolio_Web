@@ -148,8 +148,7 @@ Los cambios se guardan en `localStorage`; no modifican automaticamente `src/data
 
 ## Mejoras Recomendadas
 
-- Agregar CV descargable.
-- Agregar capturas reales del Turnero y del Portfolio, reemplazando imagenes de muestra.
+- Sumar mas capturas reales del Turnero si se quiere mostrar el flujo completo de reserva.
 - Revisar envio real del formulario desde el deploy.
 - Agregar metadatos Open Graph.
 - Incorporar tests basicos de renderizado.
