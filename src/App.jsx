@@ -87,6 +87,7 @@ const App = () => {
           tagline={data.tagline}
           location={data.location}
           avatarUrl={publicAsset(data.avatarUrl)}
+          resumeUrl={data.social.resumeUrl}
         />
         <About about={data.about} />
         <ValueProposition items={data.valueProposition} dataFocus={data.dataFocus} />

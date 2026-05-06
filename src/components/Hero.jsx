@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const Hero = ({ name, title, tagline, location, avatarUrl }) => {
+const Hero = ({ name, title, tagline, location, avatarUrl, resumeUrl }) => {
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
@@ -23,6 +23,11 @@ const Hero = ({ name, title, tagline, location, avatarUrl }) => {
             <button className="btn ghost" onClick={() => scrollToSection('contact')}>
               Contactar
             </button>
+            {resumeUrl && (
+              <a className="btn secondary" href={resumeUrl} target="_blank" rel="noreferrer">
+                Descargar CV
+              </a>
+            )}
           </div>
         </div>
         <img className="avatar" src={avatarUrl} alt={`Foto de ${name}`} />
@@ -37,6 +42,11 @@ Hero.propTypes = {
   tagline: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   avatarUrl: PropTypes.string.isRequired,
+  resumeUrl: PropTypes.string,
+};
+
+Hero.defaultProps = {
+  resumeUrl: '',
 };
 
 export default Hero;

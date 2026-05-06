@@ -22,6 +22,7 @@ Este proyecto funciona como carta de presentacion tecnica. Resume el perfil de C
 - Vista ampliada en modal para proyectos con imagenes.
 - Mini casos de estudio por proyecto: problema, solucion y aporte.
 - Botones a demo y repositorio.
+- Boton de descarga de CV actualizado desde Google Drive.
 - Formulario de contacto integrado con Formspree.
 - Modo de edicion local guardado en `localStorage`.
 - Deploy automatizado en GitHub Pages con GitHub Actions.

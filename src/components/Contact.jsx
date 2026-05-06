@@ -89,6 +89,11 @@ const Contact = ({ social }) => {
         <button className="btn secondary" type="button" onClick={() => setIsOpen(true)}>
           Enviar consulta
         </button>
+        {social.resumeUrl && (
+          <a className="btn ghost" href={social.resumeUrl} target="_blank" rel="noreferrer">
+            Descargar CV
+          </a>
+        )}
       </div>
 
       {isOpen && (
@@ -176,6 +181,7 @@ Contact.propTypes = {
     emailUser: PropTypes.string.isRequired,
     emailDomain: PropTypes.string.isRequired,
     contactEndpoint: PropTypes.string,
+    resumeUrl: PropTypes.string,
   }).isRequired,
 };
 
