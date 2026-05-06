@@ -651,7 +651,8 @@ main {
   border-radius: 12px;
 }
 
-.project-modal-card .carousel-frame img {
+.project-modal-card .carousel-frame img,
+.project-modal-card .carousel-frame video {
   object-fit: contain;
 }
 
@@ -732,7 +733,8 @@ main {
   border-bottom: 1px solid var(--border);
 }
 
-.carousel-frame img {
+.carousel-frame img,
+.carousel-frame video {
   width: 100%;
   height: 100%;
   display: block;

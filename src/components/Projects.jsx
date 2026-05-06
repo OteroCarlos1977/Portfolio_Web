@@ -67,6 +67,7 @@ const ProjectCarousel = ({ images, projectName, expanded }) => {
   };
 
   const image = images[active];
+  const isVideo = image.type === 'video' || /\.(mp4|webm|mov)$/i.test(image.src);
 
   return (
     <div
@@ -77,7 +78,17 @@ const ProjectCarousel = ({ images, projectName, expanded }) => {
       onBlur={() => setIsPaused(false)}
     >
       <div className="carousel-frame">
-        <img src={publicAsset(image.src)} alt={image.alt || `${projectName} captura ${active + 1}`} loading="lazy" />
+        {isVideo ? (
+          <video
+            src={publicAsset(image.src)}
+            poster={image.poster ? publicAsset(image.poster) : undefined}
+            controls
+            preload="metadata"
+            aria-label={image.alt || `${projectName} video ${active + 1}`}
+          />
+        ) : (
+          <img src={publicAsset(image.src)} alt={image.alt || `${projectName} captura ${active + 1}`} loading="lazy" />
+        )}
         {images.length > 1 && (
           <>
             <button
@@ -116,7 +127,7 @@ const ProjectCarousel = ({ images, projectName, expanded }) => {
                 event.stopPropagation();
                 setActive(index);
               }}
-              aria-label={`Ver captura ${index + 1}`}
+              aria-label={`Ver material ${index + 1}`}
             />
           ))}
         </div>
@@ -130,6 +141,8 @@ ProjectCarousel.propTypes = {
     PropTypes.shape({
       src: PropTypes.string.isRequired,
       alt: PropTypes.string,
+      poster: PropTypes.string,
+      type: PropTypes.string,
     })
   ),
   projectName: PropTypes.string.isRequired,
@@ -301,6 +314,8 @@ Projects.propTypes = {
         PropTypes.shape({
           src: PropTypes.string.isRequired,
           alt: PropTypes.string,
+          poster: PropTypes.string,
+          type: PropTypes.string,
         })
       ),
       repoUrl: PropTypes.string.isRequired,

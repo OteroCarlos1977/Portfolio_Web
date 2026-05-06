@@ -235,6 +235,12 @@
       "technologies": ["React", "Vite", "Bootstrap", "React Router"],
       "images": [
         {
+          "type": "video",
+          "src": "projects/coo/tu-hogar-demo.mp4",
+          "poster": "projects/coo/proyecto-final-coo.png",
+          "alt": "Video demo del Proyecto Final COO Tu Hogar"
+        },
+        {
           "src": "projects/coo/proyecto-final-coo.png",
           "alt": "Vista principal del Proyecto Final COO"
         }
