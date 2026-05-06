@@ -13,6 +13,7 @@ Este proyecto funciona como carta de presentacion tecnica. Resume el perfil de C
 - Hero profesional con foto de perfil y logo CO.
 - Seccion "Sobre mi".
 - Seccion "Que puedo aportar".
+- Seccion de busqueda profesional y focos de oportunidad.
 - Bloque de Big Data aplicado.
 - Seccion de habilidades blandas y forma de trabajo.
 - Seccion de formacion tecnica y profesional.
@@ -139,11 +140,11 @@ Los cambios se guardan en `localStorage`; no modifican automaticamente `src/data
 
 ## Proyectos Destacados
 
+- Estudio Juridico React.
 - Turnero Hospital.
 - Catalogo de Peliculas CRUD.
-- Portfolio Web.
-- Estudio Juridico React.
 - Proyecto Final COO, con carrito de compras funcional.
+- Portfolio Web.
 
 ## Mejoras Recomendadas
 

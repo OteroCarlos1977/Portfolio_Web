@@ -260,6 +260,33 @@ main {
   gap: 4px;
 }
 
+.opportunity-section {
+  background: linear-gradient(135deg, rgba(108, 99, 255, 0.12), rgba(22, 25, 34, 0.96));
+}
+
+.opportunity-description {
+  max-width: 900px;
+  color: #f2f4f8;
+  font-size: 18px;
+  margin: 8px 0 20px;
+}
+
+.opportunity-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.opportunity-tags span {
+  border: 1px solid rgba(108, 99, 255, 0.35);
+  border-radius: 999px;
+  padding: 8px 12px;
+  color: var(--text);
+  background: rgba(108, 99, 255, 0.1);
+  font-weight: 700;
+  font-size: 13px;
+}
+
 .section-header h2,
 .section-header h3 {
   margin: 0;

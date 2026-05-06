@@ -1,9 +1,9 @@
 {
   "name": "Carlos Octavio Otero",
-  "title": "Full Stack Developer | React | Node.js | Big Data",
+  "title": "Desarrollador Web Full Stack Jr. | React · Node.js · Datos · Automatización",
   "location": "Buenos Aires, Argentina",
   "avatarUrl": "foto.jpeg",
-  "tagline": "Construyo aplicaciones web claras y funcionales, con interés en datos, automatización y soluciones basadas en información.",
+  "tagline": "Desarrollo aplicaciones web simples, funcionales y orientadas a resolver procesos reales: turnos, expedientes, catálogos, reportes y tableros de datos.",
   "about": "Soy desarrollador full stack con formación técnica en programación y conocimientos en Big Data. Me enfoco en transformar procesos complejos en aplicaciones web simples de usar, documentadas y mantenibles. Trabajo principalmente con React, Vite, Node.js, Express y bases de datos SQL/SQLite/MySQL, con interés especial en análisis de datos, visualización de información, automatización y mejora operativa.",
   "valueProposition": [
     {
@@ -24,7 +24,12 @@
   ],
   "dataFocus": {
     "title": "Big Data aplicado a procesos cotidianos",
-    "description": "Trabajo con Excel, Google Sheets, Python, Power BI, Looker y Google Colab para limpiar datos, detectar patrones, preparar reportes y construir tableros que ayuden a entender mejor la operación."
+    "description": "Uso Excel, Google Sheets, Python, Power BI, Looker y Google Colab para limpiar datos, construir reportes, detectar patrones y convertir información dispersa en tableros útiles para la toma de decisiones."
+  },
+  "opportunity": {
+    "title": "Qué tipo de oportunidades busco",
+    "description": "Busco integrarme a equipos de desarrollo como desarrollador frontend o full stack junior, aportando conocimientos en React, JavaScript, Node.js, bases de datos y análisis de información. Me interesan especialmente los proyectos de gestión, automatización, dashboards y soluciones internas para organizaciones.",
+    "focus": ["Frontend React", "Full Stack Jr.", "Automatización", "Dashboards", "Sistemas de gestión"]
   },
   "softSkills": [
     {
@@ -95,6 +100,39 @@
   },
   "projects": [
     {
+      "name": "Estudio Jurídico React",
+      "description": "Aplicación orientada a gestión de expedientes y tareas para estudio jurídico, planteada con frontend React, backend Node.js y persistencia SQLite.",
+      "caseStudy": {
+        "problem": "Un estudio jurídico necesita centralizar expedientes, clientes, agenda y finanzas sin perder claridad operativa.",
+        "solution": "Organicé la interfaz en módulos con dashboard, expedientes, clientes, agenda y finanzas, mostrando capturas navegables.",
+        "impact": "Demuestra criterio para diseñar herramientas administrativas con múltiples vistas y foco en seguimiento de información."
+      },
+      "technologies": ["React", "Node.js", "SQLite"],
+      "images": [
+        {
+          "src": "projects/juridica/appjuridicadashboard.png",
+          "alt": "Dashboard principal de la aplicación jurídica"
+        },
+        {
+          "src": "projects/juridica/apjuridicaexpedientes.png",
+          "alt": "Gestión de expedientes"
+        },
+        {
+          "src": "projects/juridica/appjuridicaclientes.png",
+          "alt": "Gestión de clientes"
+        },
+        {
+          "src": "projects/juridica/appjuridicaagenda.png",
+          "alt": "Agenda del estudio jurídico"
+        },
+        {
+          "src": "projects/juridica/appjuridicafinanzas.png",
+          "alt": "Vista de finanzas"
+        }
+      ],
+      "repoUrl": "https://github.com/OteroCarlos1977/estudio_juridico_react"
+    },
+    {
       "name": "Turnero Hospital",
       "description": "Aplicación para gestionar turnos médicos con especialidades, disponibilidad, pacientes, reservas, cancelaciones y panel administrativo. Incluye demo estática para Vercel con datos mock y persistencia local.",
       "caseStudy": {
@@ -147,56 +185,6 @@
       "demoUrl": "https://tpfinalg17.vercel.app/"
     },
     {
-      "name": "Portfolio Web",
-      "description": "Portfolio personal con secciones de perfil, habilidades, proyectos y contacto. Incluye modo de edición local para actualizar contenido durante el desarrollo.",
-      "caseStudy": {
-        "problem": "Era necesario centralizar presentación profesional, proyectos, tecnologías y contacto en una sola experiencia.",
-        "solution": "Desarrollé un portfolio en React con datos estructurados, contacto vía Formspree, carruseles y publicación en GitHub Pages.",
-        "impact": "Funciona como carta de presentación técnica y permite mostrar proyectos con contexto, demo y repositorio."
-      },
-      "technologies": ["React", "Vite", "CSS", "localStorage"],
-      "images": [
-        {
-          "src": "projects/placeholders/portfolio-web.svg",
-          "alt": "Vista de muestra del portfolio web"
-        }
-      ],
-      "repoUrl": "https://github.com/OteroCarlos1977/Portfolio_Web"
-    },
-    {
-      "name": "Estudio Jurídico React",
-      "description": "Aplicación orientada a gestión de expedientes y tareas para estudio jurídico, planteada con frontend React, backend Node.js y persistencia SQLite.",
-      "caseStudy": {
-        "problem": "Un estudio jurídico necesita centralizar expedientes, clientes, agenda y finanzas sin perder claridad operativa.",
-        "solution": "Organicé la interfaz en módulos con dashboard, expedientes, clientes, agenda y finanzas, mostrando capturas navegables.",
-        "impact": "Demuestra criterio para diseñar herramientas administrativas con múltiples vistas y foco en seguimiento de información."
-      },
-      "technologies": ["React", "Node.js", "SQLite"],
-      "images": [
-        {
-          "src": "projects/juridica/appjuridicadashboard.png",
-          "alt": "Dashboard principal de la aplicación jurídica"
-        },
-        {
-          "src": "projects/juridica/apjuridicaexpedientes.png",
-          "alt": "Gestión de expedientes"
-        },
-        {
-          "src": "projects/juridica/appjuridicaclientes.png",
-          "alt": "Gestión de clientes"
-        },
-        {
-          "src": "projects/juridica/appjuridicaagenda.png",
-          "alt": "Agenda del estudio jurídico"
-        },
-        {
-          "src": "projects/juridica/appjuridicafinanzas.png",
-          "alt": "Vista de finanzas"
-        }
-      ],
-      "repoUrl": "https://github.com/OteroCarlos1977/estudio_juridico_react"
-    },
-    {
       "name": "Proyecto Final COO",
       "description": "Proyecto final académico tipo e-commerce con catálogo, login, rutas protegidas, panel administrativo y carrito de compras funcional con persistencia local.",
       "caseStudy": {
@@ -212,6 +200,23 @@
         }
       ],
       "repoUrl": "https://github.com/OteroCarlos1977/proyecto_final_COO"
+    },
+    {
+      "name": "Portfolio Web",
+      "description": "Portfolio personal con secciones de perfil, habilidades, proyectos y contacto. Incluye modo de edición local para actualizar contenido durante el desarrollo.",
+      "caseStudy": {
+        "problem": "Era necesario centralizar presentación profesional, proyectos, tecnologías y contacto en una sola experiencia.",
+        "solution": "Desarrollé un portfolio en React con datos estructurados, contacto vía Formspree, carruseles y publicación en GitHub Pages.",
+        "impact": "Funciona como carta de presentación técnica y permite mostrar proyectos con contexto, demo y repositorio."
+      },
+      "technologies": ["React", "Vite", "CSS", "localStorage"],
+      "images": [
+        {
+          "src": "projects/placeholders/portfolio-web.svg",
+          "alt": "Vista de muestra del portfolio web"
+        }
+      ],
+      "repoUrl": "https://github.com/OteroCarlos1977/Portfolio_Web"
     }
   ],
   "social": {

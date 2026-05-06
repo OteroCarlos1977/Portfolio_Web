@@ -3,6 +3,7 @@ import { usePortfolio } from './context/PortfolioContext';
 import Hero from './components/Hero';
 import About from './components/About';
 import ValueProposition from './components/ValueProposition';
+import Opportunity from './components/Opportunity';
 import SoftSkills from './components/SoftSkills';
 import Education from './components/Education';
 import Skills from './components/Skills';
@@ -35,6 +36,7 @@ const App = () => {
         <nav className="nav">
           <a href="#about">Sobre mí</a>
           <a href="#value">Aporte</a>
+          <a href="#opportunity">Búsqueda</a>
           <a href="#soft-skills">Habilidades</a>
           <a href="#education">Formación</a>
           <a href="#skills">Tecnologías</a>
@@ -91,6 +93,7 @@ const App = () => {
         />
         <About about={data.about} />
         <ValueProposition items={data.valueProposition} dataFocus={data.dataFocus} />
+        <Opportunity opportunity={data.opportunity} />
         <SoftSkills skills={data.softSkills} />
         <Education education={data.education} />
         <Skills skills={data.skills} />
