@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 
 const initialForm = {
@@ -93,6 +93,7 @@ const Contact = ({ social }) => {
   const [sent, setSent] = useState(false);
   const [isSending, setIsSending] = useState(false);
   const [error, setError] = useState('');
+  const closeButtonRef = useRef(null);
   const email = `${social.emailUser}@${social.emailDomain}`;
   const endpoint = social.contactEndpoint;
   const whatsappUrl = social.whatsappPhone
@@ -108,12 +109,34 @@ const Contact = ({ social }) => {
     }));
   };
 
-  const closeModal = () => {
+  const closeModal = useCallback(() => {
     setIsOpen(false);
     setSent(false);
     setError('');
     setIsSending(false);
-  };
+  }, []);
+
+  useEffect(() => {
+    if (!isOpen) {
+      return undefined;
+    }
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        closeModal();
+      }
+    };
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', handleKeyDown);
+    closeButtonRef.current?.focus();
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [closeModal, isOpen]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -181,7 +204,13 @@ const Contact = ({ social }) => {
                 <p className="eyebrow">Contacto directo</p>
                 <h3>Contame qué necesitás construir</h3>
               </div>
-              <button className="modal-close" type="button" onClick={closeModal} aria-label="Cerrar formulario de contacto">
+              <button
+                className="modal-close"
+                type="button"
+                onClick={closeModal}
+                aria-label="Cerrar formulario de contacto"
+                ref={closeButtonRef}
+              >
                 x
               </button>
             </div>

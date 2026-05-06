@@ -10,7 +10,7 @@ test('perfil principal contiene datos profesionales visibles', () => {
   assert.equal(profile.name, 'Carlos Octavio Otero');
   assert.match(profile.title, /Full Stack Jr\./);
   assert.match(profile.tagline, /aplicaciones web simples/i);
-  assert.match(profile.tagline, /herramientas digitales claras/i);
+  assert.match(profile.tagline, /turnos, expedientes, catálogos y reportes/i);
   assert.ok(profile.about.length > 120);
   assert.equal(profile.avatarUrl, 'foto.jpeg');
 });

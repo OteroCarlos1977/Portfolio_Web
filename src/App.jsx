@@ -8,20 +8,9 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import data from './data/profile.json';
+import { publicAsset } from './utils/assets';
 
 const App = () => {
-  const publicAsset = (path) => {
-    if (!path) {
-      return '';
-    }
-
-    if (/^https?:\/\//.test(path)) {
-      return path;
-    }
-
-    return `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`;
-  };
-
   return (
     <div className="app">
       <header className="topbar">

@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
-import { useEffect, useState } from 'react';
-
-const publicAsset = (path) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`;
+import { useCallback, useEffect, useState } from 'react';
+import { publicAsset } from '../utils/assets';
 
 const techIcons = {
   Bootstrap: 'https://cdn.simpleicons.org/bootstrap/7952B3',
@@ -58,7 +57,7 @@ const ProjectMedia = ({ images, projectName, expanded }) => {
           <video
             src={publicAsset(media.src)}
             poster={media.poster ? publicAsset(media.poster) : undefined}
-            autoPlay
+            autoPlay={expanded}
             controls={expanded}
             loop
             muted
@@ -95,8 +94,14 @@ ProjectMedia.defaultProps = {
 const Projects = ({ projects }) => {
   const [expandedProject, setExpandedProject] = useState(null);
 
-  const openProject = (project) => setExpandedProject(project);
-  const closeProject = () => setExpandedProject(null);
+  const openProject = useCallback((project) => setExpandedProject(project), []);
+  const closeProject = useCallback(() => setExpandedProject(null), []);
+  const handleCardKeyDown = useCallback((event, project) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      openProject(project);
+    }
+  }, [openProject]);
 
   useEffect(() => {
     if (!expandedProject) {
@@ -117,7 +122,7 @@ const Projects = ({ projects }) => {
       document.body.style.overflow = previousOverflow;
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [expandedProject]);
+  }, [closeProject, expandedProject]);
 
   return (
     <section className="section" id="projects">
@@ -126,16 +131,24 @@ const Projects = ({ projects }) => {
         <h2>Destacados con propósito</h2>
       </div>
       <div className="projects-grid">
-        {projects.map((project, index) => {
+        {projects.map((project) => {
           const canExpand = Boolean(project.images?.length);
 
           return (
             <article
               className={`card project ${canExpand ? 'expandable' : ''}`}
-              key={project.name + index}
+              key={project.name}
+              role={canExpand ? 'button' : undefined}
+              tabIndex={canExpand ? 0 : undefined}
+              aria-label={canExpand ? `Ampliar ${project.name}` : undefined}
               onClick={() => {
                 if (canExpand) {
                   openProject(project);
+                }
+              }}
+              onKeyDown={(event) => {
+                if (canExpand) {
+                  handleCardKeyDown(event, project);
                 }
               }}
             >
