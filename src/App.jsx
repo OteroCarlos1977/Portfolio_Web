@@ -106,9 +106,7 @@ const App = () => {
         <p>
           {data.name} · {data.location}
         </p>
-        <small>
-          Portfolio dinámico construido con React + Vite. Modo edición guardado en localStorage.
-        </small>
+        <small>Portfolio profesional construido con React + Vite.</small>
       </footer>
     </div>
   );
