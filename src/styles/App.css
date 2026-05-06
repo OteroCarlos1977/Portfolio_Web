@@ -758,6 +758,7 @@ main {
 .contact-grid {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 16px;
@@ -799,13 +800,13 @@ main {
 }
 
 .contact-action.mail {
-  color: #ea4335;
-  background: rgba(234, 67, 53, 0.1);
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .contact-action.cv {
-  color: #d7d3ff;
-  background: rgba(108, 99, 255, 0.12);
+  color: #e53935;
+  background: rgba(229, 57, 53, 0.1);
 }
 
 .contact-icon {
@@ -819,15 +820,6 @@ main {
   width: 100%;
   height: 100%;
   display: block;
-}
-
-.contact-action.mail svg,
-.contact-action.cv svg {
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.9;
-  stroke-linecap: round;
-  stroke-linejoin: round;
 }
 
 .sr-only {
