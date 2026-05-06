@@ -84,9 +84,9 @@ const ProjectCarousel = ({ images, projectName, expanded }) => {
           <video
             src={publicAsset(image.src)}
             poster={image.poster ? publicAsset(image.poster) : undefined}
-            autoPlay={!expanded}
+            autoPlay
             controls={expanded}
-            loop={!expanded}
+            loop
             muted
             playsInline
             preload="metadata"
