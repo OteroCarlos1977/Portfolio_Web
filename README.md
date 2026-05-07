@@ -147,6 +147,5 @@ El email se almacena dividido en usuario y dominio para reducir exposicion direc
 
 ## Mejoras Recomendadas
 
-- Revisar envio real del formulario desde el deploy.
 - Incorporar tests de renderizado con React Testing Library si el proyecto crece en interacciones.
 - Sumar auditoria Lighthouse despues de cada cambio visual importante.
