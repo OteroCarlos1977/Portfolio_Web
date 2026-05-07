@@ -144,8 +144,3 @@ El email se almacena dividido en usuario y dominio para reducir exposicion direc
 - Catalogo de Peliculas CRUD.
 - Proyecto Final COO, con carrito de compras funcional.
 - Portfolio Web.
-
-## Mejoras Recomendadas
-
-- Incorporar tests de renderizado con React Testing Library si el proyecto crece en interacciones.
-- Sumar auditoria Lighthouse despues de cada cambio visual importante.
