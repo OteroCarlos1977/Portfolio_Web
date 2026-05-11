@@ -171,7 +171,8 @@
           "alt": "Video demo del Proyecto Final COO Tu Hogar"
         }
       ],
-      "repoUrl": "https://github.com/OteroCarlos1977/proyecto_final_COO"
+      "repoUrl": "https://github.com/OteroCarlos1977/proyecto_final_COO",
+      "demoUrl": "https://proyectofinalcoo.netlify.app/"
     },
     {
       "name": "Portfolio Web",
