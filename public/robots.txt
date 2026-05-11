@@ -1,7 +1,9 @@
 User-agent: *
+Allow: /
 Disallow: /admin
 Disallow: /src/
-Disallow: /*.json$
+
+Sitemap: https://TU-LINK-DE-VERCEL.vercel.app/sitemap.xml
 
 User-agent: EmailCollector
 Disallow: /
