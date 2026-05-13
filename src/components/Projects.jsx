@@ -181,6 +181,11 @@ const Projects = ({ projects }) => {
                     </p>
                   </div>
                 )}
+                {project.aiOpportunity && (
+                  <p className="ai-project-note">
+                    <strong>IA posible:</strong> {project.aiOpportunity}
+                  </p>
+                )}
                 <div className="tech-list" aria-label={`Tecnologías de ${project.name}`}>
                   {project.technologies.map((tech) => (
                     <TechIcon tech={tech} key={tech} />
@@ -228,6 +233,11 @@ const Projects = ({ projects }) => {
                 </p>
               </div>
             )}
+            {expandedProject.aiOpportunity && (
+              <p className="ai-project-note expanded">
+                <strong>IA posible:</strong> {expandedProject.aiOpportunity}
+              </p>
+            )}
             <div className="tech-list" aria-label={`Tecnologías de ${expandedProject.name}`}>
               {expandedProject.technologies.map((tech) => (
                 <TechIcon tech={tech} key={tech} />
@@ -271,6 +281,7 @@ Projects.propTypes = {
       ),
       repoUrl: PropTypes.string.isRequired,
       demoUrl: PropTypes.string,
+      aiOpportunity: PropTypes.string,
     })
   ).isRequired,
 };

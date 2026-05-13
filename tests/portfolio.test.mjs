@@ -24,6 +24,7 @@ test('proyectos destacados tienen repositorio, caso de estudio y material visual
     assert.ok(project.caseStudy?.problem, `${project.name} necesita problema`);
     assert.ok(project.caseStudy?.solution, `${project.name} necesita solucion`);
     assert.ok(project.caseStudy?.impact, `${project.name} necesita aporte`);
+    assert.ok(project.aiOpportunity?.length > 40, `${project.name} necesita oportunidad IA concreta`);
 
     for (const media of project.images || []) {
       assert.ok(existsSync(join(root, 'public', media.src)), `No existe el asset ${media.src}`);
@@ -55,4 +56,16 @@ test('Formspree usa icono real en proyectos y no cae en fallback FO', () => {
 
   assert.match(projectsSource, /Formspree:\s*'https:\/\/cdn\.simpleicons\.org\/formspree\/E5126F'/);
   assert.ok(profile.projects.some((project) => project.technologies.includes('Formspree')));
+});
+
+test('IA aplicada queda integrada como capacidad profesional', () => {
+  assert.match(profile.appliedAI.title, /IA/i);
+  assert.ok(profile.appliedAI.description.length > 120);
+  assert.equal(profile.appliedAI.items.length, 4);
+
+  for (const item of profile.appliedAI.items) {
+    assert.ok(item.icon);
+    assert.ok(item.title.length > 8);
+    assert.ok(item.description.length > 60);
+  }
 });

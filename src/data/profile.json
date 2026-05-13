@@ -98,6 +98,32 @@
     "data": ["Excel", "Google Sheets", "Python", "Power BI", "Looker", "Google Colab"],
     "tools": ["Git", "GitHub", "Vercel", "npm", "Codex", "ChatGPT", "Gemini", "GitHub Copilot", "Microsoft Copilot"]
   },
+  "appliedAI": {
+    "title": "IA como apoyo práctico al desarrollo",
+    "description": "Incorporo herramientas de IA para acelerar análisis, documentación, revisión de código, generación de pruebas y diseño de funcionalidades. Mi enfoque es aplicarlas con criterio: automatizar tareas repetitivas, ordenar información y mejorar la experiencia del usuario.",
+    "items": [
+      {
+        "icon": "bot",
+        "title": "Desarrollo asistido",
+        "description": "Uso IA para explorar soluciones, refactorizar componentes, revisar errores y acelerar decisiones técnicas sin perder control del código."
+      },
+      {
+        "icon": "document",
+        "title": "Documentación y testing",
+        "description": "Me apoyo en IA para mejorar READMEs, comentarios técnicos, casos de prueba y criterios de validación reproducibles."
+      },
+      {
+        "icon": "workflow",
+        "title": "Automatización de procesos",
+        "description": "Evalúo usos de IA para clasificar solicitudes, asistir formularios, resumir consultas y reducir tareas manuales repetitivas."
+      },
+      {
+        "icon": "database",
+        "title": "Datos y decisiones",
+        "description": "Combino IA, análisis de datos y visualización para transformar información dispersa en reportes, patrones y tableros útiles."
+      }
+    ]
+  },
   "projects": [
     {
       "name": "Estudio Jurídico React",
@@ -108,6 +134,7 @@
         "impact": "Demuestra criterio para diseñar herramientas administrativas con múltiples vistas y foco en seguimiento de información."
       },
       "technologies": ["React", "Node.js", "SQLite"],
+      "aiOpportunity": "clasificación inicial de consultas, resumen de expedientes y asistencia para redactar comunicaciones internas.",
       "images": [
         {
           "type": "video",
@@ -126,6 +153,7 @@
         "impact": "Muestra capacidad para modelar procesos de atención, validar datos y presentar una solución funcional para uso institucional."
       },
       "technologies": ["React", "Vite", "Node.js", "Express", "MySQL"],
+      "aiOpportunity": "asistente de turnos, orientación por especialidad y análisis de demanda para mejorar la organización de la atención.",
       "images": [
         {
           "type": "video",
@@ -145,6 +173,7 @@
         "impact": "Convierte un trabajo académico en una muestra full stack reproducible, con CRUD real, API y datos locales."
       },
       "technologies": ["JavaScript", "Node.js", "Express", "SQLite", "Multer"],
+      "aiOpportunity": "búsqueda inteligente, recomendaciones por género y generación asistida de descripciones para películas.",
       "images": [
         {
           "type": "video",
@@ -164,6 +193,7 @@
         "impact": "Refuerza manejo de estado global, flujos de compra, componentes reutilizables y lógica funcional más allá de una maqueta visual."
       },
       "technologies": ["React", "Vite", "Bootstrap", "React Router"],
+      "aiOpportunity": "asistente de compra, recomendaciones de productos y análisis de comportamiento del carrito.",
       "images": [
         {
           "type": "video",
@@ -183,6 +213,7 @@
         "impact": "Funciona como carta de presentación técnica y permite mostrar proyectos con contexto, demo y repositorio."
       },
       "technologies": ["React", "Vite", "CSS", "Formspree"],
+      "aiOpportunity": "mejora continua de contenido, SEO, accesibilidad, documentación y pruebas automatizadas.",
       "images": [
         {
           "src": "projects/portfolio/portfolio-home.png",
