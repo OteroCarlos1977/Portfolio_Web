@@ -45,6 +45,15 @@ Este proyecto funciona como carta de presentacion tecnica. Resume el perfil de C
 
 ## Instalacion
 
+Requisito recomendado:
+
+```bash
+node --version
+pnpm --version
+```
+
+El proyecto usa Node 22 o superior y pnpm 11.
+
 ```bash
 pnpm install
 ```
