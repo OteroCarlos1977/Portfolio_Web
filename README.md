@@ -165,7 +165,7 @@ El email se almacena dividido en usuario y dominio para reducir exposicion direc
 ## Proyectos Destacados
 
 - Estudio Juridico React.
-- Running Voice Coach.
+- Asistente de Running por Voz.
 - Turnero Hospital.
 - Catalogo de Peliculas CRUD.
 - Proyecto Final COO, con carrito de compras funcional.

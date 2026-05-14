@@ -223,7 +223,7 @@
       "repoUrl": "https://github.com/OteroCarlos1977/Portfolio_Web"
     },
     {
-      "name": "Running Voice Coach",
+      "name": "Asistente de Running por Voz",
       "description": "Aplicación Android nativa en desarrollo para corredores, orientada a registrar entrenamientos, calcular ritmo, seguir rutinas por bloques y emitir alertas de voz durante la actividad.",
       "status": "En desarrollo",
       "caseStudy": {
@@ -236,15 +236,15 @@
       "images": [
         {
           "src": "projects/runners/running-active.png",
-          "alt": "Pantalla de actividad en Running Voice Coach"
+          "alt": "Pantalla de actividad en Asistente de Running por Voz"
         },
         {
           "src": "projects/runners/running-workouts.png",
-          "alt": "Pantalla de rutinas en Running Voice Coach"
+          "alt": "Pantalla de rutinas en Asistente de Running por Voz"
         },
         {
           "src": "projects/runners/running-metrics.png",
-          "alt": "Dashboard de métricas en Running Voice Coach"
+          "alt": "Dashboard de métricas en Asistente de Running por Voz"
         }
       ],
       "repoUrl": "https://github.com/OteroCarlos1977/RunningVoiceCoach"
