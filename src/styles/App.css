@@ -721,6 +721,23 @@ main {
   white-space: nowrap;
 }
 
+.status-chip {
+  border: 1px solid rgba(36, 214, 203, 0.24);
+  border-radius: 999px;
+  padding: 6px 10px;
+  color: #eafffd;
+  background: rgba(36, 214, 203, 0.1);
+  font-size: 12px;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+.btn.disabled {
+  opacity: 0.72;
+  cursor: default;
+  pointer-events: none;
+}
+
 .project-modal {
   position: fixed;
   inset: 0;

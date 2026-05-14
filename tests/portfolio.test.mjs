@@ -20,7 +20,11 @@ test('proyectos destacados tienen repositorio, caso de estudio y material visual
   assert.ok(profile.projects.length >= 5);
 
   for (const project of profile.projects) {
-    assert.match(project.repoUrl, /^https:\/\/github\.com\/OteroCarlos1977\//);
+    if (project.repoUrl) {
+      assert.match(project.repoUrl, /^https:\/\/github\.com\/OteroCarlos1977\//);
+    } else {
+      assert.match(project.status, /desarrollo|preparación/i, `${project.name} sin repo necesita estado visible`);
+    }
     assert.ok(project.description.length > 60, `${project.name} necesita descripcion suficiente`);
     assert.ok(project.caseStudy?.problem, `${project.name} necesita problema`);
     assert.ok(project.caseStudy?.solution, `${project.name} necesita solucion`);

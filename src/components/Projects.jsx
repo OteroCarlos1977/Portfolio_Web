@@ -4,13 +4,17 @@ import { createPortal } from 'react-dom';
 import { publicAsset } from '../utils/assets';
 
 const techIcons = {
+  Android: 'https://cdn.simpleicons.org/android/3DDC84',
   Bootstrap: 'https://cdn.simpleicons.org/bootstrap/7952B3',
   CSS: 'https://cdn.simpleicons.org/css/1572B6',
   Express: 'https://cdn.simpleicons.org/express/FFFFFF',
   Formspree: 'https://cdn.simpleicons.org/formspree/E5126F',
   JavaScript: 'https://cdn.simpleicons.org/javascript/F7DF1E',
+  'Jetpack Compose': 'https://cdn.simpleicons.org/jetpackcompose/4285F4',
+  Kotlin: 'https://cdn.simpleicons.org/kotlin/7F52FF',
   MySQL: 'https://cdn.simpleicons.org/mysql/4479A1',
   'Node.js': 'https://cdn.simpleicons.org/nodedotjs/5FA04E',
+  OpenAI: 'https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/openai.svg',
   React: 'https://cdn.simpleicons.org/react/61DAFB',
   'Framer Motion': 'https://cdn.simpleicons.org/framer/0055FF',
   'React Router': 'https://cdn.simpleicons.org/reactrouter/CA4245',
@@ -21,6 +25,8 @@ const techIcons = {
 const fallbackIcons = {
   localStorage: 'LS',
   Multer: 'UP',
+  GPS: 'GPS',
+  TextToSpeech: 'TTS',
 };
 
 const TechIcon = ({ tech }) => {
@@ -153,7 +159,9 @@ const Projects = ({ projects }) => {
               <div className="project-content">
                 <div className="project-title-row">
                   <h3>{project.name}</h3>
-                  {canExpand && (
+                  {project.status ? (
+                    <span className="status-chip">{project.status}</span>
+                  ) : canExpand ? (
                     <button
                       className="expand-chip"
                       type="button"
@@ -165,7 +173,7 @@ const Projects = ({ projects }) => {
                     >
                       Ampliar
                     </button>
-                  )}
+                  ) : null}
                 </div>
                 <p className="section-text small">{project.description}</p>
                 {project.caseStudy && (
@@ -195,9 +203,13 @@ const Projects = ({ projects }) => {
                     Ver demo
                   </a>
                 )}
-                <a href={project.repoUrl} target="_blank" rel="noreferrer" className="btn ghost">
-                  Ver repositorio
-                </a>
+                {project.repoUrl ? (
+                  <a href={project.repoUrl} target="_blank" rel="noreferrer" className="btn ghost">
+                    Ver repositorio
+                  </a>
+                ) : (
+                  <span className="btn ghost disabled">Repo en preparación</span>
+                )}
               </div>
             </article>
           );
@@ -247,9 +259,13 @@ const Projects = ({ projects }) => {
                   Ver demo
                 </a>
               )}
-              <a href={expandedProject.repoUrl} target="_blank" rel="noreferrer" className="btn ghost">
-                Ver repositorio
-              </a>
+              {expandedProject.repoUrl ? (
+                <a href={expandedProject.repoUrl} target="_blank" rel="noreferrer" className="btn ghost">
+                  Ver repositorio
+                </a>
+              ) : (
+                <span className="btn ghost disabled">Repo en preparación</span>
+              )}
             </div>
           </article>
         </div>,
@@ -278,9 +294,10 @@ Projects.propTypes = {
           type: PropTypes.string,
         })
       ),
-      repoUrl: PropTypes.string.isRequired,
+      repoUrl: PropTypes.string,
       demoUrl: PropTypes.string,
       aiOpportunity: PropTypes.string,
+      status: PropTypes.string,
     })
   ).isRequired,
 };

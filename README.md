@@ -19,6 +19,7 @@ Este proyecto funciona como carta de presentacion tecnica. Resume el perfil de C
 - Seccion de formacion tecnica y profesional.
 - Tarjetas de tecnologias con iconos.
 - Proyectos destacados con videos demo breves.
+- Proyecto Android nativo en desarrollo para running y asistencia por voz.
 - Vista ampliada en modal para proyectos con material visual.
 - Cards de proyectos accesibles por teclado.
 - Videos optimizados para no reproducirse en las tarjetas chicas y activarse en la vista ampliada.
@@ -164,6 +165,7 @@ El email se almacena dividido en usuario y dominio para reducir exposicion direc
 ## Proyectos Destacados
 
 - Estudio Juridico React.
+- Running Voice Coach.
 - Turnero Hospital.
 - Catalogo de Peliculas CRUD.
 - Proyecto Final COO, con carrito de compras funcional.
