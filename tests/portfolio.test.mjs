@@ -95,3 +95,13 @@ test('Framer Motion queda integrado para transiciones de secciones', () => {
   assert.ok(revealSourceExists);
   assert.match(appSource, /<RevealSection/);
 });
+
+test('React Spring queda integrado para microinteracciones del logo', () => {
+  const appSource = readFileSync(join(root, 'src/App.jsx'), 'utf8');
+  const animatedLogoExists = existsSync(join(root, 'src/components/AnimatedLogo.jsx'));
+
+  assert.ok(packageJson.dependencies['@react-spring/web']);
+  assert.ok(profile.skills.frontend.includes('React Spring'));
+  assert.ok(animatedLogoExists);
+  assert.match(appSource, /<AnimatedLogo/);
+});

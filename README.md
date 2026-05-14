@@ -42,6 +42,7 @@ Este proyecto funciona como carta de presentacion tecnica. Resume el perfil de C
 - CSS
 - PropTypes
 - Framer Motion
+- React Spring
 - Formspree
 - GitHub Pages
 - pnpm

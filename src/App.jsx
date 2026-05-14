@@ -9,6 +9,7 @@ import AppliedAI from './components/AppliedAI';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import RevealSection from './components/RevealSection';
+import AnimatedLogo from './components/AnimatedLogo';
 import data from './data/profile.json';
 import { publicAsset } from './utils/assets';
 
@@ -16,9 +17,7 @@ const App = () => {
   return (
     <div className="app">
       <header className="topbar">
-        <a className="logo" href="#hero" aria-label="Inicio">
-          <img src={publicAsset('logo-co.png')} alt="Logo CO" />
-        </a>
+        <AnimatedLogo src={publicAsset('logo-co.png')} alt="Logo CO" />
         <nav className="nav">
           <a href="#about">Sobre mí</a>
           <a href="#value">Aporte</a>
