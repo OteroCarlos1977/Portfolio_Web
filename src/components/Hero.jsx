@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const Hero = ({ name, title, tagline, location, avatarUrl, resumeUrl }) => {
+const Hero = ({ name, title, tagline, location, avatarUrl, resumeUrl = '' }) => {
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
@@ -43,10 +43,6 @@ Hero.propTypes = {
   location: PropTypes.string.isRequired,
   avatarUrl: PropTypes.string.isRequired,
   resumeUrl: PropTypes.string,
-};
-
-Hero.defaultProps = {
-  resumeUrl: '',
 };
 
 export default Hero;

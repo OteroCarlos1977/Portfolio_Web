@@ -42,7 +42,7 @@ TechIcon.propTypes = {
   tech: PropTypes.string.isRequired,
 };
 
-const ProjectMedia = ({ images, projectName, expanded }) => {
+const ProjectMedia = ({ images = [], projectName, expanded = false }) => {
   const media = images?.[0];
 
   if (!media) {
@@ -85,11 +85,6 @@ ProjectMedia.propTypes = {
   ),
   projectName: PropTypes.string.isRequired,
   expanded: PropTypes.bool,
-};
-
-ProjectMedia.defaultProps = {
-  images: [],
-  expanded: false,
 };
 
 const Projects = ({ projects }) => {

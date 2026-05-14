@@ -12,7 +12,7 @@ const variants = {
   },
 };
 
-const RevealSection = ({ children, variant }) => {
+const RevealSection = ({ children, variant = 'default' }) => {
   const reduceMotion = useReducedMotion();
   const selectedVariant = variants[variant] || variants.default;
 
@@ -25,7 +25,7 @@ const RevealSection = ({ children, variant }) => {
       className="reveal-section"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.18 }}
+      viewport={{ once: true, amount: 0.04, margin: '0px 0px -8% 0px' }}
       variants={selectedVariant}
       transition={{ duration: 0.58, ease: [0.22, 1, 0.36, 1] }}
     >
@@ -37,10 +37,6 @@ const RevealSection = ({ children, variant }) => {
 RevealSection.propTypes = {
   children: PropTypes.node.isRequired,
   variant: PropTypes.oneOf(['default', 'page']),
-};
-
-RevealSection.defaultProps = {
-  variant: 'default',
 };
 
 export default RevealSection;

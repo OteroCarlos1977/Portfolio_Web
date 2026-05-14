@@ -53,7 +53,7 @@ const icons = {
   ),
 };
 
-const ContactAction = ({ href, label, icon, variant, onClick }) => {
+const ContactAction = ({ href = '', label, icon, variant = '', onClick }) => {
   const className = `contact-action ${variant || ''}`.trim();
 
   if (href) {
@@ -79,12 +79,6 @@ ContactAction.propTypes = {
   icon: PropTypes.node.isRequired,
   variant: PropTypes.string,
   onClick: PropTypes.func,
-};
-
-ContactAction.defaultProps = {
-  href: '',
-  variant: '',
-  onClick: undefined,
 };
 
 const Contact = ({ social }) => {
