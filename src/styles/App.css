@@ -66,6 +66,17 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
+  animation: logo-rotation 28s linear infinite;
+}
+
+@keyframes logo-rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .nav {
@@ -1088,6 +1099,10 @@ textarea {
   }
 
   .media-frame video {
+    animation: none;
+  }
+
+  .logo img {
     animation: none;
   }
 

@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { useCallback, useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { publicAsset } from '../utils/assets';
 
 const techIcons = {
@@ -202,7 +203,8 @@ const Projects = ({ projects }) => {
           );
         })}
       </div>
-      {expandedProject && (
+      {expandedProject &&
+        createPortal(
         <div className="project-modal" role="dialog" aria-modal="true" aria-label={expandedProject.name} onClick={closeProject}>
           <article className="project-modal-card" onClick={(event) => event.stopPropagation()}>
             <div className="project-modal-header">
@@ -250,7 +252,8 @@ const Projects = ({ projects }) => {
               </a>
             </div>
           </article>
-        </div>
+        </div>,
+        document.body
       )}
     </section>
   );

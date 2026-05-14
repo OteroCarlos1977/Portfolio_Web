@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
+import { createPortal } from 'react-dom';
 
 const initialForm = {
   name: '',
@@ -190,7 +191,8 @@ const Contact = ({ social }) => {
         )}
       </div>
 
-      {isOpen && (
+      {isOpen &&
+        createPortal(
         <div className="contact-modal" role="dialog" aria-modal="true" aria-label="Formulario de contacto" onClick={closeModal}>
           <div className="contact-modal-card" onClick={(event) => event.stopPropagation()}>
             <div className="project-modal-header">
@@ -268,7 +270,8 @@ const Contact = ({ social }) => {
               </form>
             )}
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </section>
   );
