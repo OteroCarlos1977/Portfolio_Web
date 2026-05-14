@@ -3,7 +3,7 @@ Allow: /
 Disallow: /admin
 Disallow: /src/
 
-Sitemap: https://portfolio-web-otero-carlos.vercel.app/sitemap.xml
+Sitemap: https://oterocarlos1977.github.io/Portfolio_Web/sitemap.xml
 
 User-agent: EmailCollector
 Disallow: /

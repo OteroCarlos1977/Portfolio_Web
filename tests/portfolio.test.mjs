@@ -54,6 +54,17 @@ test('open graph queda preparado para compartir el portfolio', () => {
   assert.match(html, /property="og:image"/);
   assert.match(html, /name="twitter:card"/);
   assert.match(html, /rel="canonical"/);
+  assert.match(html, /https:\/\/oterocarlos1977\.github\.io\/Portfolio_Web\//);
+  assert.doesNotMatch(html, /TU-LINK-DE-VERCEL|portfolio-web-otero-carlos\.vercel\.app/);
+});
+
+test('sitemap y robots apuntan a GitHub Pages como URL canonica', () => {
+  const sitemap = readFileSync(join(root, 'public/sitemap.xml'), 'utf8');
+  const robots = readFileSync(join(root, 'public/robots.txt'), 'utf8');
+
+  assert.match(sitemap, /https:\/\/oterocarlos1977\.github\.io\/Portfolio_Web\//);
+  assert.match(robots, /https:\/\/oterocarlos1977\.github\.io\/Portfolio_Web\/sitemap\.xml/);
+  assert.doesNotMatch(`${sitemap}\n${robots}`, /vercel\.app|TU-LINK/);
 });
 
 test('Formspree usa icono real en proyectos y no cae en fallback FO', () => {
