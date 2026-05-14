@@ -41,17 +41,18 @@ Este proyecto funciona como carta de presentacion tecnica. Resume el perfil de C
 - PropTypes
 - Formspree
 - GitHub Pages
+- pnpm
 
 ## Instalacion
 
 ```bash
-npm install
+pnpm install
 ```
 
 ## Ejecucion Local
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 La aplicacion queda disponible normalmente en:
@@ -63,28 +64,40 @@ http://localhost:5173
 ## Build
 
 ```bash
-npm run build
+pnpm build
 ```
 
 Para previsualizar:
 
 ```bash
-npm run preview
+pnpm preview
 ```
 
 Para validar el build que usa GitHub Pages:
 
 ```bash
-GITHUB_PAGES=true npm run build
+GITHUB_PAGES=true pnpm build
 ```
 
 ## Tests
 
 ```bash
-npm test
+pnpm test
 ```
 
 Los tests validan datos principales del perfil, proyectos destacados, assets referenciados, contacto, metadatos Open Graph e iconos críticos del stack.
+
+## Gestion De Dependencias
+
+El proyecto usa pnpm como gestor de paquetes principal. Se versiona `pnpm-lock.yaml` para instalaciones reproducibles y se permite de forma explicita el build script de `esbuild`, dependencia necesaria para Vite.
+
+Comandos recomendados:
+
+```bash
+pnpm install --frozen-lockfile
+pnpm test
+pnpm build
+```
 
 ## Deploy En GitHub Pages
 
