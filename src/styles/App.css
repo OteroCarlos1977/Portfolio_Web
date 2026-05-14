@@ -27,6 +27,51 @@ body {
   color: var(--text);
 }
 
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+body::before {
+  background: linear-gradient(135deg, rgba(36, 214, 203, 0.1), transparent 30%),
+    linear-gradient(315deg, rgba(108, 99, 255, 0.1), transparent 28%);
+  opacity: 0.32;
+  animation: corner-light 18s ease-in-out infinite alternate;
+}
+
+body::after {
+  background: linear-gradient(45deg, transparent 68%, rgba(36, 214, 203, 0.06)),
+    linear-gradient(225deg, transparent 70%, rgba(108, 99, 255, 0.07));
+  opacity: 0.2;
+  animation: corner-light-secondary 24s ease-in-out infinite alternate;
+}
+
+@keyframes corner-light {
+  from {
+    opacity: 0.22;
+    filter: saturate(0.9);
+  }
+
+  to {
+    opacity: 0.42;
+    filter: saturate(1.15);
+  }
+}
+
+@keyframes corner-light-secondary {
+  from {
+    opacity: 0.14;
+  }
+
+  to {
+    opacity: 0.28;
+  }
+}
+
 .app {
   max-width: 1200px;
   margin: 0 auto;
@@ -1103,6 +1148,11 @@ textarea {
   }
 
   .logo img {
+    animation: none;
+  }
+
+  body::before,
+  body::after {
     animation: none;
   }
 
