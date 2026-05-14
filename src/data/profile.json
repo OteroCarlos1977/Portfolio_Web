@@ -126,32 +126,6 @@
   },
   "projects": [
     {
-      "name": "Running Voice Coach",
-      "description": "Aplicación Android nativa en desarrollo para corredores, orientada a registrar entrenamientos, calcular ritmo, seguir rutinas por bloques y emitir alertas de voz durante la actividad.",
-      "status": "En desarrollo",
-      "caseStudy": {
-        "problem": "Un runner necesita recibir información útil durante la carrera sin mirar constantemente la pantalla ni depender de datos inventados.",
-        "solution": "Diseñé una app Android con Kotlin y Jetpack Compose que calcula ritmo localmente, organiza rutinas estructuradas, usa voz local con TextToSpeech y deja OpenAI como mejora opcional para mensajes más naturales.",
-        "impact": "Muestra capacidad para trabajar en móvil nativo, lógica de dominio, GPS, servicios en segundo plano, pruebas unitarias y una integración responsable de IA."
-      },
-      "technologies": ["Android", "Kotlin", "Jetpack Compose", "GPS", "TextToSpeech", "OpenAI"],
-      "aiOpportunity": "convertir alertas técnicas de ritmo en mensajes breves, naturales y personalizados, manteniendo cálculos deportivos locales y fallback sin conexión.",
-      "images": [
-        {
-          "src": "projects/runners/running-active.png",
-          "alt": "Pantalla de actividad en Running Voice Coach"
-        },
-        {
-          "src": "projects/runners/running-workouts.png",
-          "alt": "Pantalla de rutinas en Running Voice Coach"
-        },
-        {
-          "src": "projects/runners/running-metrics.png",
-          "alt": "Dashboard de métricas en Running Voice Coach"
-        }
-      ]
-    },
-    {
       "name": "Estudio Jurídico React",
       "description": "Aplicación orientada a gestión de expedientes y tareas para estudio jurídico, planteada con frontend React, backend Node.js y persistencia SQLite.",
       "caseStudy": {
@@ -247,6 +221,33 @@
         }
       ],
       "repoUrl": "https://github.com/OteroCarlos1977/Portfolio_Web"
+    },
+    {
+      "name": "Running Voice Coach",
+      "description": "Aplicación Android nativa en desarrollo para corredores, orientada a registrar entrenamientos, calcular ritmo, seguir rutinas por bloques y emitir alertas de voz durante la actividad.",
+      "status": "En desarrollo",
+      "caseStudy": {
+        "problem": "Un runner necesita recibir información útil durante la carrera sin mirar constantemente la pantalla ni depender de datos inventados.",
+        "solution": "Diseñé una app Android con Kotlin y Jetpack Compose que calcula ritmo localmente, organiza rutinas estructuradas, usa voz local con TextToSpeech y deja OpenAI como mejora opcional para mensajes más naturales.",
+        "impact": "Muestra capacidad para trabajar en móvil nativo, lógica de dominio, GPS, servicios en segundo plano, pruebas unitarias y una integración responsable de IA."
+      },
+      "technologies": ["Android", "Kotlin", "Jetpack Compose", "GPS", "TextToSpeech", "OpenAI"],
+      "aiOpportunity": "convertir alertas técnicas de ritmo en mensajes breves, naturales y personalizados, manteniendo cálculos deportivos locales y fallback sin conexión.",
+      "images": [
+        {
+          "src": "projects/runners/running-active.png",
+          "alt": "Pantalla de actividad en Running Voice Coach"
+        },
+        {
+          "src": "projects/runners/running-workouts.png",
+          "alt": "Pantalla de rutinas en Running Voice Coach"
+        },
+        {
+          "src": "projects/runners/running-metrics.png",
+          "alt": "Dashboard de métricas en Running Voice Coach"
+        }
+      ],
+      "repoUrl": "https://github.com/OteroCarlos1977/RunningVoiceCoach"
     }
   ],
   "social": {
