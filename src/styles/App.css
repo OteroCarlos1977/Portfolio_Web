@@ -98,6 +98,11 @@ main {
   gap: 32px;
 }
 
+.reveal-section {
+  transform-origin: center top;
+  will-change: opacity, transform;
+}
+
 .hero {
   background: linear-gradient(135deg, rgba(108, 99, 255, 0.1), rgba(108, 99, 255, 0));
   border: 1px solid var(--border);
@@ -288,6 +293,17 @@ main {
   border: 1px solid rgba(255, 255, 255, 0.07);
   border-radius: 14px;
   background: rgba(255, 255, 255, 0.04);
+  transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease;
+}
+
+.value-card:hover,
+.ai-card:hover,
+.soft-skill-card:hover,
+.education-card:hover,
+.skills-grid .card:hover {
+  border-color: rgba(36, 214, 203, 0.22);
+  background: rgba(255, 255, 255, 0.055);
+  transform: translateY(-3px);
 }
 
 .value-index {
@@ -357,6 +373,7 @@ main {
   border: 1px solid rgba(255, 255, 255, 0.07);
   border-radius: 14px;
   background: rgba(255, 255, 255, 0.04);
+  transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease;
 }
 
 .soft-skill-icon {
@@ -399,6 +416,7 @@ main {
   border: 1px solid rgba(255, 255, 255, 0.07);
   border-radius: 14px;
   background: rgba(255, 255, 255, 0.04);
+  transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease;
 }
 
 .education-card h3,
@@ -446,6 +464,7 @@ main {
 .skills-grid .card {
   min-width: 0;
   padding: 16px;
+  transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease;
 }
 
 .skills-grid .card h3 {
@@ -533,6 +552,7 @@ main {
   border: 1px solid rgba(36, 214, 203, 0.17);
   border-radius: 14px;
   background: rgba(36, 214, 203, 0.06);
+  transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease;
 }
 
 .ai-icon {
@@ -1069,5 +1089,10 @@ textarea {
 
   .media-frame video {
     animation: none;
+  }
+
+  .reveal-section {
+    opacity: 1 !important;
+    transform: none !important;
   }
 }

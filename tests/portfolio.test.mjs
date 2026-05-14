@@ -5,6 +5,7 @@ import { test } from 'node:test';
 
 const root = process.cwd();
 const profile = JSON.parse(readFileSync(join(root, 'src/data/profile.json'), 'utf8'));
+const packageJson = JSON.parse(readFileSync(join(root, 'package.json'), 'utf8'));
 
 test('perfil principal contiene datos profesionales visibles', () => {
   assert.equal(profile.name, 'Carlos Octavio Otero');
@@ -68,4 +69,14 @@ test('IA aplicada queda integrada como capacidad profesional', () => {
     assert.ok(item.title.length > 8);
     assert.ok(item.description.length > 60);
   }
+});
+
+test('Framer Motion queda integrado para transiciones de secciones', () => {
+  const appSource = readFileSync(join(root, 'src/App.jsx'), 'utf8');
+  const revealSourceExists = existsSync(join(root, 'src/components/RevealSection.jsx'));
+
+  assert.ok(packageJson.dependencies['framer-motion']);
+  assert.ok(profile.skills.frontend.includes('Framer Motion'));
+  assert.ok(revealSourceExists);
+  assert.match(appSource, /<RevealSection/);
 });

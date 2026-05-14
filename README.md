@@ -22,6 +22,7 @@ Este proyecto funciona como carta de presentacion tecnica. Resume el perfil de C
 - Vista ampliada en modal para proyectos con material visual.
 - Cards de proyectos accesibles por teclado.
 - Videos optimizados para no reproducirse en las tarjetas chicas y activarse en la vista ampliada.
+- Transiciones suaves entre secciones con Framer Motion y soporte para usuarios con reduccion de movimiento.
 - Mini casos de estudio por proyecto: problema, solucion y aporte.
 - Botones a demo y repositorio.
 - Boton de descarga de CV actualizado desde Google Drive.
@@ -39,6 +40,7 @@ Este proyecto funciona como carta de presentacion tecnica. Resume el perfil de C
 - JavaScript
 - CSS
 - PropTypes
+- Framer Motion
 - Formspree
 - GitHub Pages
 - pnpm

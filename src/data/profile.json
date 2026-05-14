@@ -92,7 +92,7 @@
     }
   ],
   "skills": {
-    "frontend": ["HTML", "CSS", "JavaScript", "React", "Vite", "Bootstrap"],
+    "frontend": ["HTML", "CSS", "JavaScript", "React", "Vite", "Framer Motion", "Bootstrap"],
     "backend": ["Node.js", "Express", "APIs REST", "JWT"],
     "databases": ["MySQL", "SQLite", "localStorage"],
     "data": ["Excel", "Google Sheets", "Python", "Power BI", "Looker", "Google Colab"],

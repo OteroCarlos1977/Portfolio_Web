@@ -11,6 +11,7 @@ const techIcons = {
   MySQL: 'https://cdn.simpleicons.org/mysql/4479A1',
   'Node.js': 'https://cdn.simpleicons.org/nodedotjs/5FA04E',
   React: 'https://cdn.simpleicons.org/react/61DAFB',
+  'Framer Motion': 'https://cdn.simpleicons.org/framer/0055FF',
   'React Router': 'https://cdn.simpleicons.org/reactrouter/CA4245',
   SQLite: 'https://cdn.simpleicons.org/sqlite/003B57',
   Vite: 'https://cdn.simpleicons.org/vite/646CFF',

@@ -14,6 +14,7 @@ const skillIcons = {
   JavaScript: 'https://cdn.simpleicons.org/javascript/F7DF1E',
   React: 'https://cdn.simpleicons.org/react/61DAFB',
   Vite: 'https://cdn.simpleicons.org/vite/646CFF',
+  'Framer Motion': 'https://cdn.simpleicons.org/framer/0055FF',
   Bootstrap: 'https://cdn.simpleicons.org/bootstrap/7952B3',
   'Node.js': 'https://cdn.simpleicons.org/nodedotjs/5FA04E',
   Express: 'https://cdn.simpleicons.org/express/FFFFFF',
